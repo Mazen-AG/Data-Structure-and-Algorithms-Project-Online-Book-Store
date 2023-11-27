@@ -14,4 +14,5 @@ private:
 		void addBookToShoppingList(Book book);
 		void removeBookFromShoppingList(Book book);
 		void print();
+		List<Book> getShoppingList();
 };

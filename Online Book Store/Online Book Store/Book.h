@@ -14,6 +14,7 @@ class Book {
 	double price;
 	bool available;
 	int quantity;
+	string bookType; //if the book is an ebook or a physical copy, if ebook then the address is the email
 public:
 	class Author {
 	private:
@@ -30,6 +31,7 @@ public:
 	double getPrice();
 	bool getAvailable();
 	int getQuantity();
+	string getBookType();
 	void setTitle(string title);
 	void setAuthor(string author);
 	void setPublisher(string publisher);
@@ -38,5 +40,6 @@ public:
 	void setPrice(double price);
 	void setAvailable(bool available);
 	void setQuantity(int quantity);
+	void setBookType(string bookType);
 	void print();
 };

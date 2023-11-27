@@ -41,5 +41,20 @@
     <ClInclude Include="Shopping Cart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Payment Proccessing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wish List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Order Tracking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory Management.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
