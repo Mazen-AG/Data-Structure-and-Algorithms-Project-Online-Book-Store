@@ -23,6 +23,6 @@ public:
 	void insert(const T &data);
 	void deleteNode(T data);
 	BinNode<T>* findMin(BinNode<T>* node) const;
-	void inOrderTraversal(std::ostream& out, BinNode<T>* node);
+	// void inOrderTraversal(std::ostream& out, BinNode<T>* node);
 
 };
