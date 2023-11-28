@@ -21,6 +21,9 @@
     <ClCompile Include="Dynamic List.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Book.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">

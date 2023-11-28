@@ -16,13 +16,8 @@ class Book {
 	int quantity;
 	string bookType; //if the book is an ebook or a physical copy, if ebook then the address is the email
 public:
-	class Author {
-	private:
-		string authorName;
-		int authorID;
-	};
 	Book();
-	Book(string title, Author author, string publisher, int isbn, string category, double price);
+	Book(string title, string author, string publisher, int isbn, string category, double price);
 	string getTitle();
 	string getAuthor();
 	string getPublisher();
@@ -42,7 +37,7 @@ public:
 	void setQuantity(int quantity);
 	void setBookType(string bookType);
 	void print();
-	bool Book::operator +(const Book& book);
 	bool Book::operator==(const Book& book);
+	void Book::operator=(const Book& book);
 };
 

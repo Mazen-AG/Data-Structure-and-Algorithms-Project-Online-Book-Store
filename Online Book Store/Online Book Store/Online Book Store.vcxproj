@@ -121,6 +121,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Book.cpp" />
     <ClCompile Include="Dynamic List.cpp" />
     <ClCompile Include="MainForm.cpp" />
   </ItemGroup>
