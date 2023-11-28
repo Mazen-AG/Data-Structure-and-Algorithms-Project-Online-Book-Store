@@ -3,7 +3,7 @@
 #include "Book.h"
 #include "Dynamic Array.h"
 #include "Wish List.h"
-
+/*
     Wish List::void addBookToWishList(Book book) {
         books.insert(book, size);
         size++;
@@ -42,3 +42,4 @@
     List<Book> getWishList() {
         return books;
     }
+    */

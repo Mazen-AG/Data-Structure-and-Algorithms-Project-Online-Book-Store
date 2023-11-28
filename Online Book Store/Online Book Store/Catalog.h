@@ -3,16 +3,15 @@
 using namespace std;
 #include <string>
 #include "Book.h"
-#include "Dynamic Array.h"
+#include "BinaryTree.h"
 
 class Catalog {
 	private:
-	List<Book> books[100];
-	int size;
+		BinNode<Book>* rootNode;
+		int size = 0;
 	public:
-		Catalog();
+		Catalog(BinNode<Book>* rootNode);
 		void addBook(Book book);
-		void print();
 		void removeBook(Book book);
-
+		void print();
 };

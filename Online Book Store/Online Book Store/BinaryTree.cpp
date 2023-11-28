@@ -188,6 +188,7 @@ void BinaryTree<T>::deleteNode(T data)
 	}
 	
 }
+
 template <typename T>
 void inOrderTraversal(ostream& out, BinNode<T>* node)
 {
@@ -199,27 +200,9 @@ void inOrderTraversal(ostream& out, BinNode<T>* node)
 	}
 }
 
-template <typename T>
-BinNode<T>* inOrderTraversal(BinNode<T>* node);
 
 template <typename T>
 std::ostream& operator<<(std::ostream& out, const BinaryTree<T>& tree) {
 	inOrderTraversal(out, tree.root);
 	return out;
 }
-
-
-
-int main()
-{
-	
-
-
-	
-
-
-	return 0;
-
-
-}
-

@@ -12,14 +12,13 @@ private:
 	List<Book> foundBooks[1];
 public:
 	Search();
-	void searchByTitle(Catalog catalog, string title);
-	void searchByAuthor(Catalog catalog, string author);
-	void searchByPublisher(Catalog catalog, string publisher);
-	void searchByISBN(Catalog catalog, int isbn);
-	void searchByCategory(Catalog catalog, string category);
-	void searchByAvailability(Catalog catalog, bool available);
-	void searchByQuantity(Catalog catalog, int quantity);
+	List<Book> searchByTitle(Catalog catalog, string title);
+	List<Book> searchByAuthor(Catalog catalog, string author);
+	List<Book> searchByPublisher(Catalog catalog, string publisher);
+	List<Book> searchByISBN(Catalog catalog, int isbn);
+	List<Book> searchByCategory(Catalog catalog, string category);
+	List<Book> searchByAvailability(Catalog catalog, bool available);
+	List<Book> searchByQuantity(Catalog catalog, int quantity);
+	void clearSearch();
 	void print();
-};
-
 };

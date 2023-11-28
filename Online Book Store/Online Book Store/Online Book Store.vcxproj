@@ -123,9 +123,11 @@
   <ItemGroup>
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="Book.cpp" />
+    <ClCompile Include="Catalog.cpp" />
     <ClCompile Include="Dynamic List.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="Order Tracking.cpp" />
+    <ClCompile Include="Search and Filter.cpp" />
     <ClCompile Include="Wish List Driver.cpp" />
   </ItemGroup>
   <ItemGroup>
