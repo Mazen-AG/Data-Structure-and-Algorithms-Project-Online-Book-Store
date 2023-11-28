@@ -154,3 +154,16 @@ bool Book::operator<(Book& book) {
 	}
 
 }
+
+ostream& operator<<(ostream& out, Book book) {
+	out << "Title: " << book.title << endl;
+	out << "Author: " << book.author << endl;
+	out << "Publisher: " << book.publisher << endl;
+	out << "ISBN: " << book.isbn << endl;
+	out << "Category: " << book.category << endl;
+	out << "Price: " << book.price << endl;
+	out << "Available: " << book.available << endl;
+	out << "Quantity: " << book.quantity << endl;
+	out << "Book Type: " << book.bookType << endl;
+	return out;
+}

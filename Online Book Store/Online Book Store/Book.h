@@ -4,7 +4,7 @@ using namespace std;
 
 
 class Book {
-private:
+public:
 	string title;
 	string author;
 	string publisher;
@@ -44,5 +44,7 @@ public:
 	bool operator<(Book& book);
 
 
+
 };
 
+ostream& operator<<(ostream& out, Book book);S
