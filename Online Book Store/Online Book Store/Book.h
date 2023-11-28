@@ -42,7 +42,7 @@ public:
 	void setQuantity(int quantity);
 	void setBookType(string bookType);
 	void print();
-
+	bool Book::operator +(const Book& book);
 	bool Book::operator==(const Book& book);
 };
 
