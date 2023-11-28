@@ -1,7 +1,8 @@
 #pragma once
 
 #include <iostream>
-
+#include "Dynamic Array.h"
+#include "Order Tracking.h"
 using namespace std;
 
 class User {
@@ -11,6 +12,7 @@ class User {
 	string password;
 	string address;
 	string phoneNumber;
+	List<OrderTracking> orders;
 public:
 	User();
 	User(string name, string email, string password, string address, string phoneNumber);
@@ -24,5 +26,6 @@ public:
 	void setPassword(string password);
 	void setAddress(string address);
 	void setPhoneNumber(string phoneNumber);
+	void addOrder(OrderTracking order);
 	void print();
 };
