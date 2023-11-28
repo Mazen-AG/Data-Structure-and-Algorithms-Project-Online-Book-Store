@@ -23,7 +23,7 @@ public:
 	void deleteNode(T data);
 	BinNode<T>* findMin(BinNode<T>* node) const;
 	void inOrderTraversal(ostream& out, BinNode<T>* node);
-	ostream& operator<<(std::ostream& out, const BinaryTree<T>& tree);
+	
 	
 	
 };
