@@ -27,10 +27,10 @@
     <ClCompile Include="Order Tracking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Wish List.cpp">
+    <ClCompile Include="BinaryTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BinaryTree.cpp">
+    <ClCompile Include="Wish List Driver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

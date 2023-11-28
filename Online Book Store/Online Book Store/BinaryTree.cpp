@@ -198,6 +198,10 @@ void inOrderTraversal(ostream& out, BinNode<T>* node)
 		inOrderTraversal(out, node->right);
 	}
 }
+
+template <typename T>
+BinNode<T>* inOrderTraversal(BinNode<T>* node);
+
 template <typename T>
 std::ostream& operator<<(std::ostream& out, const BinaryTree<T>& tree) {
 	inOrderTraversal(out, tree.root);

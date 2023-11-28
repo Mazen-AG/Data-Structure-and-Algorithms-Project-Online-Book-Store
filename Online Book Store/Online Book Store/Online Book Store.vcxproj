@@ -126,7 +126,7 @@
     <ClCompile Include="Dynamic List.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="Order Tracking.cpp" />
-    <ClCompile Include="Wish List.cpp" />
+    <ClCompile Include="Wish List Driver.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />

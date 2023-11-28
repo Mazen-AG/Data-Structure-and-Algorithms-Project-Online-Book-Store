@@ -1,6 +1,10 @@
 #ifndef BINARY_TREE_H
 #define BINARY_TREE_H
 using namespace std;
+
+template <typename T>
+typedef BinNode<T>* NodePtr;
+
 template <typename T>
 class BinNode
 {
@@ -23,6 +27,7 @@ public:
 	void deleteNode(T data);
 	BinNode<T>* findMin(BinNode<T>* node) const;
 	void inOrderTraversal(ostream& out, BinNode<T>* node);
+	BinNode<T>* inOrderTraversal(BinNode<T>* node);
 	
 	
 	
