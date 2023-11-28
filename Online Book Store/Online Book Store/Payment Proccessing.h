@@ -29,6 +29,7 @@ private:
 		string getCardName();
 		string getCardType();
 		string getCardExpDate();
+		bool checkCreditCard(CreditCard creditcard);
 	};
 	class Recepit {
 	private:

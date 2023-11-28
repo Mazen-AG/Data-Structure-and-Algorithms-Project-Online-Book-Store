@@ -43,3 +43,4 @@ public:
 	void setBookType(string bookType);
 	void print();
 };
+
