@@ -121,11 +121,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Dynamic List.cpp" />
     <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="Order Tracking.cpp" />
+    <ClCompile Include="Wish List.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="Book.h" />
     <ClInclude Include="Catalog.h" />
     <ClInclude Include="Dynamic Array.h" />
