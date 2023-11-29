@@ -9,7 +9,6 @@ private:
 	ShoppingList shoppingCart;
 	int total;
 	string paymentMethod;
- 	OrderTracking orderTracking;
     	string generateUniqueOrderID;
 	class CreditCard {
 		private:
