@@ -68,7 +68,7 @@ private:
 	public:
 		Payment();
 		void calculateTotal();
-		void paymentMethod();
+		void chosenPaymentMethod();
 		void creditCardPayment(CreditCard creditCard);
 		void payPalPayment(string PayPalemail,string PayPalpassword);
 		void print();

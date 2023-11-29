@@ -22,6 +22,8 @@ public:
 
     void display(ostream& out) const;
 
+    void push_back(T item);
+
 private:
     int mySize;
     int myCapacity;

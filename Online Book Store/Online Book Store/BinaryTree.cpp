@@ -22,7 +22,7 @@ BinaryTree<T>::BinaryTree() {
 	this->root = nullptr;
 }
 template <typename T>
-BinNode<T>* BinaryTree<T>::findMin(BinNode<T>* node) const {
+BinNode<T>* BinaryTree<T>::findMin(BinNode<T>* node) const { //why the fuck is this here -turnip
 	while (node->left)
 	{
 		node = node->left;
@@ -31,7 +31,7 @@ BinNode<T>* BinaryTree<T>::findMin(BinNode<T>* node) const {
 }
 
 template <typename T>
-bool BinaryTree<T>::search(const T& data) const
+BinNode<T> BinaryTree<T>::search(const T& data) const
 {
 
 	BinNode<T>* current = root;
@@ -48,12 +48,12 @@ bool BinaryTree<T>::search(const T& data) const
 		else
 		{
 
-			return true;
+			return current;
 		}
 
 	}
 
-	return false;
+	return nullptr;
 }
 
 
@@ -189,21 +189,6 @@ void BinaryTree<T>::deleteNode(T data)
 
 }
 
-template <typename T>
-T getNode(const T& datatosearch, BinNode<T>* node) {
-	if (node->left) {
-		if (node->data == datatosearch)
-			return node->data;
-		else
-			return getNode(datatosearch, node->left);
-	}
-	else {
-		if (node->data == datatosearch)
-			return node->data;
-		else
-			return getNode(datatosearch, node->right);
-	}
-}
 
 
 template <typename T>
@@ -219,4 +204,37 @@ void BinaryTree<T>::printNode(std::ostream& out, BinNode<T>* node) {
 		printNode(out, node->right);
 	}
 }
+
+
+template<> BinNode<Book>* BinaryTree<Book>::searchBy(std::string factor, std::string factorName) const {
+    BinNode<Book>* current = root;
+    if(factor == "author") {
+        current->searchByAuthor(factor);
+    }
+    return nullptr;
+}
+
+template<> BinNode<Book>* BinNode<Book>::searchByAuthor(std::string author) const {
+    if (this == nullptr) {
+        return nullptr;
+    }
+
+    if (this->data.author == author) {
+        return this;
+    } else {
+        BinNode<Book>* resultLeft = this->left->searchByAuthor(author);
+        BinNode<Book>* resultRight = this->right->searchByAuthor(author);
+
+        if (resultLeft != nullptr) {
+            return resultLeft;
+        }
+
+        if (resultRight != nullptr) {
+            return resultRight;
+        }
+
+        return nullptr;
+    }
+}
+
 

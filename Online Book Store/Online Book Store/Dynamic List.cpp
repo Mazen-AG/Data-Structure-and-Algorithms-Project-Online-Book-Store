@@ -110,3 +110,9 @@ void List<T>::erase(int pos){
 
     mySize--;
 }
+
+template <typename T>
+void List<T>::push_back(T item) {
+    insert(item, mySize);
+}
+
