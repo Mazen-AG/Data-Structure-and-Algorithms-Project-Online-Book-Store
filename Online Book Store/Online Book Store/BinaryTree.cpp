@@ -209,33 +209,41 @@ void BinaryTree<T>::printNode(std::ostream& out, BinNode<T>* node) {
 template<> BinNode<Book>* BinaryTree<Book>::searchBy(std::string factor, std::string factorName) const {
 	BinNode<Book>* current = root;
 	if (factor == "author") {
-		current->searchByAuthor(factor);
+		current->searchByAuthor(factor, current);
 	}
 	return nullptr;
 }
 
-template<> BinNode<Book>* BinNode<Book>::searchByAuthor(std::string author) const {
+template<> BinNode<Book>* BinNode<Book>::searchByAuthor(std::string author, BinNode<Book>* book)  {
+	BinNode<Book>* result = nullptr;
+
 	if (this == nullptr) {
 		return nullptr;
 	}
 
 	if (this->data.author == author) {
-		return this;
+		return  this;
 	}
-	else {
-		BinNode<Book>* resultLeft = this->left->searchByAuthor(author);
-		BinNode<Book>* resultRight = this->right->searchByAuthor(author);
-
-		if (resultLeft != nullptr) {
-			return resultLeft;
-		}
-
-		if (resultRight != nullptr) {
-			return resultRight;
-		}
-
-		return nullptr;
+	if(this != nullptr){
+		result = searchByAuthor(author, this->left);
+	}
+	if (result == nullptr) {
+		result = searchByAuthor(author, this->right);
 	}
 }
+/*
+private Node locate(String p, Node famTree)
+{
+	Node result = null;
+	if (famTree == null)
+		return null;
+	if (famTree.value.equals(p))
+		return famTree;
+	if (famTree.left != null)
+		result = locate(p, famTree.left);
+	if (result == null)
+		result = locate(p, famTree.right);
+	return result;
 
-
+}
+*/

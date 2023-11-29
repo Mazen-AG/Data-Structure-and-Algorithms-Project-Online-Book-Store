@@ -11,7 +11,7 @@ public:
     BinNode();
     BinNode(T item);
 
-    BinNode* searchByAuthor(std::string author) const;
+    BinNode* searchByAuthor(std::string author) ;
 };
 
 
