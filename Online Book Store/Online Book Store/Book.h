@@ -36,15 +36,14 @@ public:
 	void setQuantity(int quantity);
 	void setBookType(string bookType);
 	void print();
-	long long getValueOfBook();
+	long long getValueOfBook() const;
 
 	bool operator==(const Book& book);
+	bool operator!=(const Book& book);
 	void operator=(const Book& book);
-	bool operator>(Book& book);
-	bool operator<(Book& book);
-
-
+	bool operator>(Book& book) const;
+	bool operator<(Book& book) const;
 
 };
 
-ostream& operator<<(ostream& out, Book book);
+ostream& operator<<(ostream& out, const Book& book);

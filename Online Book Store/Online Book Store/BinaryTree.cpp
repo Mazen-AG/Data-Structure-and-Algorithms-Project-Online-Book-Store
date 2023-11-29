@@ -22,8 +22,7 @@ BinaryTree<T>::BinaryTree() {
 	this->root = nullptr;
 }
 template <typename T>
-BinNode<T>* BinaryTree<T>::findMin(BinNode<T>* node) const
-{
+BinNode<T>* BinaryTree<T>::findMin(BinNode<T>* node) const {
 	while (node->left)
 	{
 		node = node->left;
@@ -189,6 +188,24 @@ void BinaryTree<T>::deleteNode(T data)
 	}
 
 }
+
+template <typename T>
+T getNode(const T& datatosearch, BinNode<T>* node) {
+	if (node->left) {
+		if (node->data == datatosearch)
+			return node->data;
+		else
+			return getNode(datatosearch, node->left);
+	}
+	else {
+		if (node->data == datatosearch)
+			return node->data;
+		else
+			return getNode(datatosearch, node->right);
+	}
+}
+
+
 template <typename T>
 void BinaryTree<T>::print(std::ostream& out) {
 	printNode(out, root);
@@ -202,3 +219,4 @@ void BinaryTree<T>::printNode(std::ostream& out, BinNode<T>* node) {
 		printNode(out, node->right);
 	}
 }
+

@@ -1,6 +1,7 @@
 #include "Book.h"
 #include <iostream>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -92,8 +93,10 @@ void Book::print() {
 	cout << "Book Type: " << bookType << endl;
 }
 
-long long Book::getValueOfBook() {
+long long Book::getValueOfBook() const {
 	long long sum = 0;
+	std::stringstream ss(isbn);
+	ss >> sum;
 	for (char c : author) {
 		sum += int(c);
 	}
@@ -103,12 +106,7 @@ long long Book::getValueOfBook() {
 	for (char c : publisher) {
 		sum += int(c);
 	}
-	for (char c : isbn) {
-		if (isdigit(c)) {
-			int digit = c - '0';
-			sum = sum * 10 + digit;
-		}
-	}
+
 	for (char c : category) {
 		sum += int(c);
 	}
@@ -123,6 +121,16 @@ bool Book::operator==(const Book& book) {
 		return false;
 	}
 }
+
+bool Book::operator!=(const Book& book) {
+	if (title != book.title || author != book.author || publisher != book.publisher || isbn != book.isbn || category != book.category || price != book.price || available != book.available || quantity != book.quantity || bookType != book.bookType) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
 void Book::operator=(const Book& book) {
 	title = book.title;
 	author = book.author;
@@ -136,7 +144,7 @@ void Book::operator=(const Book& book) {
 
 }
 
-bool Book::operator>(Book& book) {
+bool Book::operator>(Book& book) const {
 	if (this->getValueOfBook() > book.getValueOfBook()) {
 		return true;
 	}
@@ -145,7 +153,7 @@ bool Book::operator>(Book& book) {
 	}
 
 }
-bool Book::operator<(Book& book) {
+bool Book::operator<(Book& book) const {
 	if (this->getValueOfBook() < book.getValueOfBook()) {
 		return true;
 	}
@@ -155,7 +163,9 @@ bool Book::operator<(Book& book) {
 
 }
 
-ostream& operator<<(ostream& out, Book book) {
+ostream& operator<<(ostream& out, const Book& book) {
+	out << book.getValueOfBook() << endl;
+	/*
 	out << "Title: " << book.title << endl;
 	out << "Author: " << book.author << endl;
 	out << "Publisher: " << book.publisher << endl;
@@ -165,5 +175,6 @@ ostream& operator<<(ostream& out, Book book) {
 	out << "Available: " << book.available << endl;
 	out << "Quantity: " << book.quantity << endl;
 	out << "Book Type: " << book.bookType << endl;
+	*/
 	return out;
 }

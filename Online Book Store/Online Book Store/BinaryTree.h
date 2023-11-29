@@ -20,7 +20,7 @@ public:
     void insert(const T& data);
     void deleteNode(T data);
     BinNode<T>* findMin(BinNode<T>* node) const;
-
+    T getNode(const T& datatosearch, BinNode<T>* node);
     // Print function instead of overloading <<
     void print(std::ostream& out);
 
