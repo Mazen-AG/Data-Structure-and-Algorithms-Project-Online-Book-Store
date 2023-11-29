@@ -129,8 +129,9 @@
     <ClCompile Include="OrderTracking.cpp" />
     <ClCompile Include="Payment.cpp" />
     <ClCompile Include="Search and Filter.cpp" />
+    <ClCompile Include="ShoppingListDriver.cpp" />
     <ClCompile Include="User.cpp" />
-    <ClCompile Include="Wish List Driver.cpp" />
+    <ClCompile Include="WishListDriver.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
@@ -142,11 +143,11 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="OrderTracking.h" />
-    <ClInclude Include="Payment Proccessing.h" />
+    <ClInclude Include="PaymentProccessing.h" />
     <ClInclude Include="Search and Filter.h" />
     <ClInclude Include="ShoppingCart.h" />
     <ClInclude Include="User.h" />
-    <ClInclude Include="Wish List.h" />
+    <ClInclude Include="WishList.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">

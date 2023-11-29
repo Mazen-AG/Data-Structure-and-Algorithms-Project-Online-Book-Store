@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include "Dynamic Array.h"
-#include "Order Tracking.h"
+#include "DynamicArray.h"
+#include "OrderTracking.h"
 using namespace std;
 
 class User {

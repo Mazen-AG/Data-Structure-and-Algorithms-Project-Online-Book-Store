@@ -1,9 +1,9 @@
 #pragma once
 
 #include <iostream>
-#include "Shopping Cart.h"
+#include "ShoppingCart.h"
 #include "User.h"
-#include "Order Tracking.h"
+#include "OrderTracking.h"
 class Payment {
 private:
 	ShoppingList shoppingCart;
