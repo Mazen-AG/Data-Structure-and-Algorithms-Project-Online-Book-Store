@@ -47,4 +47,4 @@ public:
 
 };
 
-ostream& operator<<(ostream& out, Book book);S
+ostream& operator<<(ostream& out, Book book);
