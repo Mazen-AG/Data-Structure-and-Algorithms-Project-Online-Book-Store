@@ -9,6 +9,7 @@ private:
 	ShoppingList shoppingCart;
 	int total;
 	string paymentMethod;
+    	string generateUniqueOrderID();
 	class CreditCard {
 		private:
 		int CCV;
