@@ -1,5 +1,4 @@
 
-
 #include <iostream>
 #include "BinaryTree.h"
 using namespace std;
@@ -7,14 +6,14 @@ using namespace std;
 
 template <typename T>
 BinNode<T>::BinNode() {
-	this->data = 0; 
+	this->data = 0;
 	this->left = nullptr;
 	this->right = nullptr;
 }
 
 template <typename T>
 BinNode<T>::BinNode(T item) {
-	this->data = item; 
+	this->data = item;
 	this->left = nullptr;
 	this->right = nullptr;
 }
@@ -33,9 +32,9 @@ BinNode<T>* BinaryTree<T>::findMin(BinNode<T>* node) const
 }
 
 template <typename T>
-bool BinaryTree<T>::search(const T& data) const 
+bool BinaryTree<T>::search(const T& data) const
 {
-	
+
 	BinNode<T>* current = root;
 	while (current)
 	{
@@ -49,12 +48,12 @@ bool BinaryTree<T>::search(const T& data) const
 		}
 		else
 		{
-			
+
 			return true;
 		}
-		
+
 	}
-	
+
 	return false;
 }
 
@@ -70,8 +69,8 @@ void BinaryTree<T>::insert(const T& data)
 		return;
 	}
 
-	BinNode<T> *current = root;
-	while(true)
+	BinNode<T>* current = root;
+	while (true)
 	{
 		if (data < current->data)
 		{
@@ -81,7 +80,7 @@ void BinaryTree<T>::insert(const T& data)
 				break;
 			}
 			current = current->left;
-		} 
+		}
 		else
 		{
 			if (current->right == nullptr)
@@ -155,7 +154,7 @@ void BinaryTree<T>::deleteNode(T data)
 		}
 		delete current;
 		return;
-	} 
+	}
 	//SUBCASE: LEFT CHILD
 	else
 	{
@@ -186,23 +185,18 @@ void BinaryTree<T>::deleteNode(T data)
 		deleteNode(successor->data);
 		current->data = successor->data;
 	}
-	
+
 }
-/*
 template <typename T>
-void inOrderTraversal(ostream& out, BinNode<T>* node)
+void BinaryTree<T>::inOrderTraversal(ostream& out, BinNode<T>* node)
 {
+
 	if (node)
 	{
 		inOrderTraversal(out, node->left);
 		out << node->data << " ";
 		inOrderTraversal(out, node->right);
 	}
-}
-*/
 
-template <typename T>
-std::ostream& operator<<(std::ostream& out, const BinaryTree<T>& tree) {
-	inOrderTraversal(out, tree.root);
-	return out;
 }
+

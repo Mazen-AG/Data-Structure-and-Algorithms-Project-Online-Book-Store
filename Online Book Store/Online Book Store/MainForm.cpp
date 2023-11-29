@@ -20,5 +20,13 @@ int main() {
 
 	Book testbook(title, author, publisher, isbn, category, price, available, quantity, booktype);
 	testbook.print();
+	BinaryTree<int> test;
+	test.insert(1);
+	test.insert(5);
+	test.insert(8);
+	test.insert(3);
+	test.insert(9);
+	ostream& out = cout;
+	test.inOrderTraversal(out, test.root);
 	return 0;
 }

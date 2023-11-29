@@ -1,7 +1,6 @@
-#pragma once
+
+#include <iostream>
 using namespace std;
-
-
 template <typename T>
 class BinNode
 {
@@ -20,9 +19,14 @@ public:
 	BinNode<T>* root;
 	BinaryTree();
 	bool search(const T& data) const;
-	void insert(const T &data);
+	void insert(const T& data);
 	void deleteNode(T data);
+	void inOrderTraversal(ostream& out, BinNode<T>* node);
 	BinNode<T>* findMin(BinNode<T>* node) const;
-	// void inOrderTraversal(std::ostream& out, BinNode<T>* node);
+
+
+
+
 
 };
+
