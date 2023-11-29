@@ -124,29 +124,30 @@
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Catalog.cpp" />
-    <ClCompile Include="Dynamic List.cpp" />
+    <ClCompile Include="DynamicList.cpp" />
     <ClCompile Include="MainForm.cpp" />
-    <ClCompile Include="Order Tracking.cpp" />
+    <ClCompile Include="OrderTracking.cpp" />
     <ClCompile Include="Payment.cpp" />
     <ClCompile Include="Search and Filter.cpp" />
+    <ClCompile Include="ShoppingListDriver.cpp" />
     <ClCompile Include="User.cpp" />
-    <ClCompile Include="Wish List Driver.cpp" />
+    <ClCompile Include="WishListDriver.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="Book.h" />
     <ClInclude Include="Catalog.h" />
-    <ClInclude Include="Dynamic Array.h" />
+    <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Inventory Management.h" />
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Order Tracking.h" />
-    <ClInclude Include="Payment Proccessing.h" />
+    <ClInclude Include="OrderTracking.h" />
+    <ClInclude Include="PaymentProccessing.h" />
     <ClInclude Include="Search and Filter.h" />
-    <ClInclude Include="Shopping Cart.h" />
+    <ClInclude Include="ShoppingCart.h" />
     <ClInclude Include="User.h" />
-    <ClInclude Include="Wish List.h" />
+    <ClInclude Include="WishList.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">

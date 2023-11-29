@@ -1,16 +1,19 @@
 #pragma once
 
 #include <iostream>
-#include "Catalog.h"
-#include "Book.h"
-#include "Dynamic Array.h"
-
+#include "Book.cpp"
+#include "DynamicList.cpp"
+using namespace std;
 class ShoppingList {
 private:
-	List<Book> books[100];
+	List<Book> books;
 	int size;
+	Book* boooks;
 	public:
-		ShoppingList();
+        ShoppingList();
+		//~ShoppingList();
+		ShoppingList(int initialcapacity);
+
 		void addBookToShoppingList(Book book);
 		void removeBookFromShoppingList(Book book);
 		void print();

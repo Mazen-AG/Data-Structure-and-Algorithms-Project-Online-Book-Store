@@ -1,6 +1,6 @@
 #include "Search and Filter.h"
 #include "Book.h"
-#include "Dynamic Array.h"
+#include "DynamicArray.h"
 #include "Catalog.h"
 
 #include <iostream>

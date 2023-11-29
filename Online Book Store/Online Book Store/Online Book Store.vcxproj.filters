@@ -18,19 +18,16 @@
     <ClCompile Include="MainForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Dynamic List.cpp">
+    <ClCompile Include="DynamicList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Book.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Order Tracking.cpp">
+    <ClCompile Include="OrderTracking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BinaryTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Wish List Driver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Search and Filter.cpp">
@@ -45,6 +42,12 @@
     <ClCompile Include="Payment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ShoppingListDriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WishListDriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
@@ -56,31 +59,31 @@
     <ClInclude Include="Catalog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dynamic Array.h">
+    <ClInclude Include="DynamicArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Search and Filter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Shopping Cart.h">
+    <ClInclude Include="ShoppingCart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Payment Proccessing.h">
+    <ClInclude Include="PaymentProccessing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="User.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Wish List.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Order Tracking.h">
+    <ClInclude Include="OrderTracking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Inventory Management.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BinaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WishList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

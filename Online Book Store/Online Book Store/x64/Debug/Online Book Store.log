@@ -1,0 +1,257 @@
+﻿  MainForm.cpp
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\MainForm.cpp(30,7): error C2039: 'inOrderTraversal': is not a member of 'BinaryTree<int>'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\MainForm.cpp(23,2):
+  see declaration of 'BinaryTree<int>'
+  
+  Payment.cpp
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\PaymentProccessing.h(71,8): error C2365: 'Payment::paymentMethod': redefinition; previous definition was 'data member'
+  (compiling source file 'Payment.cpp')
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\PaymentProccessing.h(11,9):
+  see declaration of 'Payment::paymentMethod'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(69,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(168,46): error C2063: 'Payment::generateUniqueOrderID': not a function
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29): error C2672: 'begin': no matching overloaded function found
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1824,27):
+  could be '_Ty *std::begin(_Ty (&)[_Size]) noexcept'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  	'_Ty *std::begin(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'List<Book>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1806,30):
+  or       'unknown-type std::begin(const _Container &) noexcept(<expr>)'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  	Failed to specialize function template 'unknown-type std::begin(const _Container &) noexcept(<expr>)'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  		With the following template arguments:
+  			C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  			'_Container=List<Book>'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1807,23):
+  		'begin': is not a member of 'List<Book>'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\ShoppingCart.h(9,2):
+  		see declaration of 'List<Book>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1800,30):
+  or       'unknown-type std::begin(_Container &) noexcept(<expr>)'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  	Failed to specialize function template 'unknown-type std::begin(_Container &) noexcept(<expr>)'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  		With the following template arguments:
+  			C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  			'_Container=List<Book>'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1801,23):
+  		'begin': is not a member of 'List<Book>'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\ShoppingCart.h(9,2):
+  		see declaration of 'List<Book>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\initializer_list(54,35):
+  or       'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  	'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'List<Book>'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29): error C2672: 'end': no matching overloaded function found
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1829,27):
+  could be '_Ty *std::end(_Ty (&)[_Size]) noexcept'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  	'_Ty *std::end(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'List<Book>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1818,30):
+  or       'unknown-type std::end(const _Container &) noexcept(<expr>)'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  	Failed to specialize function template 'unknown-type std::end(const _Container &) noexcept(<expr>)'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  		With the following template arguments:
+  			C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  			'_Container=List<Book>'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1819,23):
+  		'end': is not a member of 'List<Book>'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\ShoppingCart.h(9,2):
+  		see declaration of 'List<Book>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1812,30):
+  or       'unknown-type std::end(_Container &) noexcept(<expr>)'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  	Failed to specialize function template 'unknown-type std::end(_Container &) noexcept(<expr>)'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  		With the following template arguments:
+  			C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  			'_Container=List<Book>'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1813,23):
+  		'end': is not a member of 'List<Book>'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\ShoppingCart.h(9,2):
+  		see declaration of 'List<Book>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\initializer_list(59,35):
+  or       'const _Elem *std::end(std::initializer_list<_Elem>) noexcept'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29):
+  	'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'List<Book>'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29): error C3536: '<begin>$L0': cannot be used before it is initialized
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,29): error C3536: '<end>$L0': cannot be used before it is initialized
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,37): error C2100: illegal indirection
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,37): error C2440: 'initializing': cannot convert from 'int' to 'const Book &'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,37):
+  Reason: cannot convert from 'int' to 'const Book'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(189,37):
+  No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(190,22): error C2662: 'double Book::getPrice(void)': cannot convert 'this' pointer from 'const Book' to 'Book &'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(190,18):
+  Conversion loses qualifiers
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Book.cpp(44,21):
+  see declaration of 'Book::getPrice'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(190,22):
+  while trying to match the argument list '()'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(190,31): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(194,31): error C2063: 'Payment::paymentMethod': not a function
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(222,15): error C2511: 'void Payment::payPalPayment(void)': overloaded member function not found in 'Payment'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\PaymentProccessing.h(7,7):
+  see declaration of 'Payment'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(242,5): error C2064: term does not evaluate to a function taking 0 arguments
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(250,9): error C2660: 'Payment::payPalPayment': function does not take 0 arguments
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\PaymentProccessing.h(73,8):
+  see declaration of 'Payment::payPalPayment'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(250,9):
+  while trying to match the argument list '()'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(260,30): error C2064: term does not evaluate to a function taking 0 arguments
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(265,23): error C2039: 'getBookType': is not a member of 'OrderTracking'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\OrderTracking.h(6,7):
+  see declaration of 'OrderTracking'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(267,39): error C2065: 'user': undeclared identifier
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(270,39): error C2065: 'user': undeclared identifier
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(273,35): error C3861: 'getPaymentMethod': identifier not found
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(277,18): error C2065: 'receipt': undeclared identifier
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(288,30): error C3861: 'getPaymentMethod': identifier not found
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(300,12): error C2660: 'Payment::Recepit::setTime': function does not take 0 arguments
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(104,24):
+  see declaration of 'Payment::Recepit::setTime'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(300,12):
+  while trying to match the argument list '()'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(303,12): error C2660: 'Payment::Recepit::setEmail': function does not take 0 arguments
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(108,24):
+  see declaration of 'Payment::Recepit::setEmail'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(303,12):
+  while trying to match the argument list '()'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(304,12): error C2660: 'Payment::Recepit::setName': function does not take 0 arguments
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(112,24):
+  see declaration of 'Payment::Recepit::setName'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(304,12):
+  while trying to match the argument list '()'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(305,12): error C2660: 'Payment::Recepit::setAddress': function does not take 0 arguments
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(116,24):
+  see declaration of 'Payment::Recepit::setAddress'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(305,12):
+  while trying to match the argument list '()'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(306,12): error C2660: 'Payment::Recepit::setBookType': function does not take 0 arguments
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(120,24):
+  see declaration of 'Payment::Recepit::setBookType'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(306,12):
+  while trying to match the argument list '()'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(307,12): error C2660: 'Payment::Recepit::setTotalAmountPaid': function does not take 0 arguments
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(124,24):
+  see declaration of 'Payment::Recepit::setTotalAmountPaid'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(307,12):
+  while trying to match the argument list '()'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(308,12): error C2660: 'Payment::Recepit::setVAT': function does not take 0 arguments
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(128,24):
+  see declaration of 'Payment::Recepit::setVAT'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(308,12):
+  while trying to match the argument list '()'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(312,5): error C2065: 'user': undeclared identifier
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(312,19): error C2065: 'orderTracking': undeclared identifier
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(296,69): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Search and Filter.cpp
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Catalog.h(10,10): error C2143: syntax error: missing ';' before '<'
+  (compiling source file 'Search%20and%20Filter.cpp')
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Catalog.h(10,10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Search%20and%20Filter.cpp')
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Catalog.h(10,26): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'Search%20and%20Filter.cpp')
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Catalog.h(13,11): error C2061: syntax error: identifier 'BinNode'
+  (compiling source file 'Search%20and%20Filter.cpp')
+  
+  User.cpp
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(61,12): error C2039: 'push_back': is not a member of 'List<OrderTracking>'
+  C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.h(15,2):
+  see declaration of 'List<OrderTracking>'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30): error C2672: 'begin': no matching overloaded function found
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1824,27):
+  could be '_Ty *std::begin(_Ty (&)[_Size]) noexcept'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  	'_Ty *std::begin(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'List<OrderTracking>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1806,30):
+  or       'unknown-type std::begin(const _Container &) noexcept(<expr>)'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  	Failed to specialize function template 'unknown-type std::begin(const _Container &) noexcept(<expr>)'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  		With the following template arguments:
+  			C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  			'_Container=List<OrderTracking>'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1807,23):
+  		'begin': is not a member of 'List<OrderTracking>'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.h(15,2):
+  		see declaration of 'List<OrderTracking>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1800,30):
+  or       'unknown-type std::begin(_Container &) noexcept(<expr>)'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  	Failed to specialize function template 'unknown-type std::begin(_Container &) noexcept(<expr>)'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  		With the following template arguments:
+  			C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  			'_Container=List<OrderTracking>'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1801,23):
+  		'begin': is not a member of 'List<OrderTracking>'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.h(15,2):
+  		see declaration of 'List<OrderTracking>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\initializer_list(54,35):
+  or       'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  	'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'List<OrderTracking>'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30): error C2672: 'end': no matching overloaded function found
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1829,27):
+  could be '_Ty *std::end(_Ty (&)[_Size]) noexcept'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  	'_Ty *std::end(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'List<OrderTracking>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1818,30):
+  or       'unknown-type std::end(const _Container &) noexcept(<expr>)'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  	Failed to specialize function template 'unknown-type std::end(const _Container &) noexcept(<expr>)'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  		With the following template arguments:
+  			C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  			'_Container=List<OrderTracking>'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1819,23):
+  		'end': is not a member of 'List<OrderTracking>'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.h(15,2):
+  		see declaration of 'List<OrderTracking>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1812,30):
+  or       'unknown-type std::end(_Container &) noexcept(<expr>)'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  	Failed to specialize function template 'unknown-type std::end(_Container &) noexcept(<expr>)'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  		With the following template arguments:
+  			C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  			'_Container=List<OrderTracking>'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1813,23):
+  		'end': is not a member of 'List<OrderTracking>'
+  		C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.h(15,2):
+  		see declaration of 'List<OrderTracking>'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\initializer_list(59,35):
+  or       'const _Elem *std::end(std::initializer_list<_Elem>) noexcept'
+  	C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30):
+  	'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'List<OrderTracking>'
+  
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30): error C3536: '<begin>$L0': cannot be used before it is initialized
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,30): error C3536: '<end>$L0': cannot be used before it is initialized
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(73,36): error C2100: illegal indirection
+C:\Users\Basel Ashraf\source\repos\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\User.cpp(74,15): error C2039: 'print': is not a member of 'System::Int32'
+  Generating Code...

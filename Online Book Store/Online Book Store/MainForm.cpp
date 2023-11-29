@@ -27,6 +27,6 @@ int main() {
 	test.insert(3);
 	test.insert(9);
 	ostream& out = cout;
-	test.inOrderTraversal(out, test.root);
+	//test.inOrderTraversal(out, test.root);
 	return 0;
 }

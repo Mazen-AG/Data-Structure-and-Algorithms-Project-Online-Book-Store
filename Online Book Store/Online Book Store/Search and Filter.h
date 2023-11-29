@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Book.h"
-#include "Dynamic Array.h"
+#include "DynamicArray.h"
 #include "Catalog.h"
 
 using namespace std;
