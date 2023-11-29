@@ -207,34 +207,35 @@ void BinaryTree<T>::printNode(std::ostream& out, BinNode<T>* node) {
 
 
 template<> BinNode<Book>* BinaryTree<Book>::searchBy(std::string factor, std::string factorName) const {
-    BinNode<Book>* current = root;
-    if(factor == "author") {
-        current->searchByAuthor(factor);
-    }
-    return nullptr;
+	BinNode<Book>* current = root;
+	if (factor == "author") {
+		current->searchByAuthor(factor);
+	}
+	return nullptr;
 }
 
 template<> BinNode<Book>* BinNode<Book>::searchByAuthor(std::string author) const {
-    if (this == nullptr) {
-        return nullptr;
-    }
+	if (this == nullptr) {
+		return nullptr;
+	}
 
-    if (this->data.author == author) {
-        return this;
-    } else {
-        BinNode<Book>* resultLeft = this->left->searchByAuthor(author);
-        BinNode<Book>* resultRight = this->right->searchByAuthor(author);
+	if (this->data.author == author) {
+		return this;
+	}
+	else {
+		BinNode<Book>* resultLeft = this->left->searchByAuthor(author);
+		BinNode<Book>* resultRight = this->right->searchByAuthor(author);
 
-        if (resultLeft != nullptr) {
-            return resultLeft;
-        }
+		if (resultLeft != nullptr) {
+			return resultLeft;
+		}
 
-        if (resultRight != nullptr) {
-            return resultRight;
-        }
+		if (resultRight != nullptr) {
+			return resultRight;
+		}
 
-        return nullptr;
-    }
+		return nullptr;
+	}
 }
 
 

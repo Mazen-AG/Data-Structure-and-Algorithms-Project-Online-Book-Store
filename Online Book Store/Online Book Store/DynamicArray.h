@@ -6,7 +6,6 @@ using namespace std;
 template <typename T>
 class List {
 public:
-    List();
     List(int maxSize = 1024);
 
     ~List();
@@ -23,8 +22,7 @@ public:
 
     void display(ostream& out) const;
 
-    T& operator[](int index);
-
+    void push_back(T item);
 
 private:
     int mySize;
