@@ -1,4 +1,4 @@
-
+*.suo
 *.db
 *.db-shm
 *.vsidx
