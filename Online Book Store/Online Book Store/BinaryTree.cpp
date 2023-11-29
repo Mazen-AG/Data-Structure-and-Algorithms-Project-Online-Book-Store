@@ -57,6 +57,8 @@ bool BinaryTree<T>::search(const T& data) const
 	return false;
 }
 
+
+
 template <typename T>
 void BinaryTree<T>::insert(const T& data)
 {
@@ -188,15 +190,15 @@ void BinaryTree<T>::deleteNode(T data)
 
 }
 template <typename T>
-void BinaryTree<T>::inOrderTraversal(ostream& out, BinNode<T>* node)
-{
-
-	if (node)
-	{
-		inOrderTraversal(out, node->left);
-		out << node->data << " ";
-		inOrderTraversal(out, node->right);
-	}
-
+void BinaryTree<T>::print(std::ostream& out) {
+	printNode(out, root);
 }
 
+template <typename T> //Inorder traversel of the tree
+void BinaryTree<T>::printNode(std::ostream& out, BinNode<T>* node) {
+	if (node) {
+		printNode(out, node->left);
+		out << node->data << " ";
+		printNode(out, node->right);
+	}
+}
