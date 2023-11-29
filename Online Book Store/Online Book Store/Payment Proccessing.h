@@ -10,7 +10,7 @@ private:
 	int total;
 	string paymentMethod;
  	OrderTracking orderTracking;
-    	string generateUniqueOrderID();
+    	string generateUniqueOrderID;
 	class CreditCard {
 		private:
 		int CCV;
