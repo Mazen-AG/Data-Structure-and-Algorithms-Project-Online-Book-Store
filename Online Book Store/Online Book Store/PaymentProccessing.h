@@ -1,17 +1,17 @@
 #pragma once
 
 #include <iostream>
-#include "ShoppingCart.h"
+#include "Shopping Cart.h"
 #include "User.h"
-#include "OrderTracking.h"
+#include "Order Tracking.h"
 class Payment {
 private:
 	ShoppingList shoppingCart;
 	int total;
 	string paymentMethod;
-    	string generateUniqueOrderID;
+	string generateUniqueOrderID;
 	class CreditCard {
-		private:
+	private:
 		int CCV;
 		int cardNumber;
 		string cardName;
@@ -65,17 +65,17 @@ private:
 
 	};
 
-	public:
-		Payment();
-		void calculateTotal();
-		void paymentMethod();
-		void creditCardPayment(CreditCard creditCard);
-		void payPalPayment(string PayPalemail,string PayPalpassword);
-		void print();
-		void pay();
-		void confirmPayment(); //don't forget to call makeReceipt(), printReceipt() and add the order to order tracking
-		void cancelPayment();
-		void makeReceipt();
-		void printReceipt(Recepit recepit);
+public:
+	Payment();
+	void calculateTotal();
+	void chosenPaymentMethod();
+	void creditCardPayment(CreditCard creditCard);
+	void payPalPayment(string PayPalemail, string PayPalpassword);
+	void print();
+	void pay();
+	void confirmPayment(); //don't forget to call makeReceipt(), printReceipt() and add the order to order tracking
+	void cancelPayment();
+	void makeReceipt();
+	void printReceipt(Recepit recepit);
 
 };

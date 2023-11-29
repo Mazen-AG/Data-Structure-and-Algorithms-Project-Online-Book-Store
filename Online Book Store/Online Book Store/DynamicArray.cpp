@@ -1,18 +1,11 @@
-#include "DynamicArray.h"
-
+#include "Dynamic Array.h"
 #include <cassert>
+#include <new>
 
 using namespace std;
 
 template <typename T>
-List<T>::List() {
-    mySize = 0;
-    myCapacity = 100;
-    myArray = new(nothrow) T[myCapacity];
-    assert(myArray != nullptr);
-}
-template <typename T>
-List<T>::List(int maxSize){
+List<T>::List(int maxSize) {
     mySize = 0;
     myCapacity = maxSize;
     myArray = new(nothrow) T[myCapacity];
@@ -20,46 +13,36 @@ List<T>::List(int maxSize){
 }
 
 template <typename T>
-List<T>::~List(){
+List<T>::~List() {
     delete[] myArray;
 }
 
 template <typename T>
-T& List<T>::operator[](int index) {
-    if (index < 0 || index >= mySize) {
-        // Handle index out of range error, throw exception, or return a default value
-        // For demonstration purposes, let's throw an exception
-        throw out_of_range("Index out of range");
-    }
-    return myArray[index];
-}
-
-template <typename T>
-List<T>::List(const List& origList){
+List<T>::List(const List& origList) {
     mySize = origList.mySize;
     myCapacity = origList.myCapacity;
     myArray = new(nothrow) T[myCapacity];
 
-    if (myArray != nullptr){
+    if (myArray != nullptr) {
         for (int i = 0; i < mySize; i++)
             myArray[i] = origList.myArray[i];
     }
-    else{
+    else {
         cerr << "Not enough memory to allocate for the list\n";
         exit(1);
     }
 }
 
 template <typename T>
-const List<T>& List<T>::operator=(const List& rightHandSide){
+const List<T>& List<T>::operator=(const List& rightHandSide) {
 
-    if (this != &rightHandSide){
-        if (myCapacity != rightHandSide.myCapacity){
+    if (this != &rightHandSide) {
+        if (myCapacity != rightHandSide.myCapacity) {
             delete[] myArray;
             myCapacity = rightHandSide.myCapacity;
             myArray = new(nothrow) T[myCapacity];
 
-            if (myArray == nullptr){
+            if (myArray == nullptr) {
                 cerr << "Not enough memory to allocate for the list\n";
                 exit(1);
             }
@@ -72,36 +55,36 @@ const List<T>& List<T>::operator=(const List& rightHandSide){
 }
 
 template <typename T>
-bool List<T>::empty() const{
+bool List<T>::empty() const {
     return mySize == 0;
 }
 
 template <typename T>
-void List<T>::display(ostream& out) const{
+void List<T>::display(ostream& out) const {
     for (int i = 0; i < mySize; i++)
         out << myArray[i] << "  ";
 }
 
 template <typename T>
-ostream& operator<< (ostream& out, const List<T>& aList){
+ostream& operator<< (ostream& out, const List<T>& aList) {
     aList.display(out);
     return out;
 }
 
 template <typename T>
-void List<T>::insert(T item, int pos){
-    if (mySize == myCapacity){
+void List<T>::insert(T item, int pos) {
+    if (mySize == myCapacity) {
         cerr << "*** No space for list element -- terminating "
             "execution ***\n";
         exit(1);
     }
-    if (pos < 0 || pos > mySize){
+    if (pos < 0 || pos > mySize) {
         cerr << "*** Illegal location to insert -- " << pos
             << ".  List unchanged. ***\n";
         return;
     }
 
-    for (int i = mySize; i > pos; i--){
+    for (int i = mySize; i > pos; i--) {
         myArray[i] = myArray[i - 1];
     }
 
@@ -109,23 +92,27 @@ void List<T>::insert(T item, int pos){
     mySize++;
 }
 
-
 template <typename T>
-void List<T>::erase(int pos){
-    if (mySize == 0){
+void List<T>::erase(int pos) {
+    if (mySize == 0) {
         cerr << "*** List is empty ***\n";
         return;
     }
-    if (pos < 0 || pos >= mySize){
+    if (pos < 0 || pos >= mySize) {
         cerr << "Illegal location to delete -- " << pos
             << ".  List unchanged. ***\n";
         return;
     }
 
-    for (int i = pos; i < mySize; i++){
+    for (int i = pos; i < mySize; i++) {
         myArray[i] = myArray[i + 1];
     }
 
     mySize--;
+}
+
+template <typename T>
+void List<T>::push_back(T item) {
+    insert(item, mySize);
 }
 

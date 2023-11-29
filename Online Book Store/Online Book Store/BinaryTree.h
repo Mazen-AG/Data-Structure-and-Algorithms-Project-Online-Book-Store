@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "Book.h"
 
 template <typename T>
 class BinNode {
@@ -9,18 +10,22 @@ public:
     BinNode<T>* right;
     BinNode();
     BinNode(T item);
+
+    BinNode* searchByAuthor(std::string author) const;
 };
+
+
 
 template <typename T>
 class BinaryTree {
 public:
     BinNode<T>* root;
     BinaryTree();
-    bool search(const T& data) const;
+    BinNode<T> search(const T& data) const;
+    BinNode<Book>* searchBy(std::string factor, std::string factorName) const;
     void insert(const T& data);
     void deleteNode(T data);
     BinNode<T>* findMin(BinNode<T>* node) const;
-    T getNode(const T& datatosearch, BinNode<T>* node);
     // Print function instead of overloading <<
     void print(std::ostream& out);
 
