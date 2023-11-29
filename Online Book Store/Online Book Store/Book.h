@@ -1,4 +1,6 @@
 #pragma once
+#ifndef BOOK_H
+#define BOOK_H
 using namespace std;
 #include <string>
 
@@ -36,14 +38,15 @@ public:
 	void setQuantity(int quantity);
 	void setBookType(string bookType);
 	void print();
-	long long getValueOfBook() const;
+	long long getValueOfBook();
 
-	bool operator==(const Book& book);
-	bool operator!=(const Book& book);
+	bool operator==(const Book& book) const;
 	void operator=(const Book& book);
-	bool operator>(Book& book) const;
-	bool operator<(Book& book) const;
+	bool operator>(Book& book);
+	bool operator<(Book& book);
+
+
 
 };
-
-ostream& operator<<(ostream& out, const Book& book);
+#endif // BOOK_H
+ostream& operator<<(ostream& out, Book book);

@@ -18,13 +18,13 @@
     <ClCompile Include="MainForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Dynamic List.cpp">
+    <ClCompile Include="DynamicList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Book.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Order Tracking.cpp">
+    <ClCompile Include="OrderTracking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BinaryTree.cpp">
@@ -56,13 +56,13 @@
     <ClInclude Include="Catalog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dynamic Array.h">
+    <ClInclude Include="DynamicArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Search and Filter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Shopping Cart.h">
+    <ClInclude Include="ShoppingCart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Payment Proccessing.h">
@@ -74,7 +74,7 @@
     <ClInclude Include="Wish List.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Order Tracking.h">
+    <ClInclude Include="OrderTracking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Inventory Management.h">

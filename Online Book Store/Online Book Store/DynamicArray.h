@@ -6,6 +6,7 @@ using namespace std;
 template <typename T>
 class List {
 public:
+    List();
     List(int maxSize = 1024);
 
     ~List();
@@ -21,6 +22,9 @@ public:
     void erase(int pos);
 
     void display(ostream& out) const;
+
+    T& operator[](int index);
+
 
 private:
     int mySize;

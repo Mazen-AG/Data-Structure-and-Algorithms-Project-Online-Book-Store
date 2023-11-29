@@ -1,8 +1,7 @@
-#include "Order Tracking.h"
+#include "OrderTracking.h"
 #include <iostream>
 
 OrderTracking::OrderTracking() {
-    // Default constructor
     orderID = "";
     orderDate = "";
     orderStatus = "";
@@ -12,7 +11,6 @@ OrderTracking::OrderTracking() {
 }
 
 OrderTracking::OrderTracking(string orderID, string orderDate, string orderStatus, string orderType, string orderAddress, string orderPayment) {
-    // Parameterized constructor
     this->orderID = orderID;
     this->orderDate = orderDate;
     this->orderStatus = orderStatus;

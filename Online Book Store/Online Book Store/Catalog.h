@@ -3,7 +3,7 @@
 using namespace std;
 #include <string>
 #include "Book.h"
-#include "BinaryTree.h"
+
 
 class Catalog {
 	private:

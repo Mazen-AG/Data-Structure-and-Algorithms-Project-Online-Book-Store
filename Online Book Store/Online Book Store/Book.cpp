@@ -1,11 +1,10 @@
 #include "Book.h"
 #include <iostream>
 #include <string>
-#include <sstream>
 
 using namespace std;
 
-Book::Book() {
+inline Book::Book() {
 	title = "";
 	author = "";
 	publisher = "";
@@ -16,7 +15,7 @@ Book::Book() {
 	quantity = 0;
 	bookType = "";
 }
-Book::Book(string title, string author, string publisher, string isbn, string category, double price, bool available, int quantity, string booktype) {
+ inline Book::Book(string title, string author, string publisher, string isbn, string category, double price, bool available, int quantity, string booktype) {
 	this->title = title;
 	this->author = author;
 	this->publisher = publisher;
@@ -27,61 +26,61 @@ Book::Book(string title, string author, string publisher, string isbn, string ca
 	this->quantity = quantity;
 	this->bookType = booktype;
 }
-string Book::getTitle() {
+inline string Book::getTitle() {
 	return title;
 }
-string Book::getAuthor() {
+inline string Book::getAuthor() {
 	return author;
 }
-string Book::getPublisher() {
+inline string Book::getPublisher() {
 	return publisher;
 }
-string Book::getISBN() {
+inline string Book::getISBN() {
 	return isbn;
 }
-string Book::getCategory() {
+inline string Book::getCategory() {
 	return category;
 }
-double Book::getPrice() {
+inline double Book::getPrice() {
 	return price;
 }
-bool Book::getAvailable() {
+inline bool Book::getAvailable() {
 	return available;
 }
-int Book::getQuantity() {
+inline int Book::getQuantity() {
 	return quantity;
 }
-string Book::getBookType() {
+inline string Book::getBookType() {
 	return bookType;
 }
-void Book::setTitle(string title) {
+inline void Book::setTitle(string title) {
 	this->title = title;
 }
-void Book::setAuthor(string author) {
+inline void Book::setAuthor(string author) {
 	this->author = author;
 }
-void Book::setPublisher(string publisher) {
+inline void Book::setPublisher(string publisher) {
 	this->publisher = publisher;
 }
-void Book::setISBN(string isbn) {
+inline void Book::setISBN(string isbn) {
 	this->isbn = isbn;
 }
-void Book::setCategory(string category) {
+inline void Book::setCategory(string category) {
 	this->category = category;
 }
-void Book::setPrice(double price) {
+inline void Book::setPrice(double price) {
 	this->price = price;
 }
-void Book::setAvailable(bool available) {
+inline void Book::setAvailable(bool available) {
 	this->available = available;
 }
-void Book::setQuantity(int quantity) {
+inline void Book::setQuantity(int quantity) {
 	this->quantity = quantity;
 }
-void Book::setBookType(string bookType) {
+inline void Book::setBookType(string bookType) {
 	this->bookType = bookType;
 }
-void Book::print() {
+inline void Book::print() {
 	cout << "Title: " << title << endl;
 	cout << "Author: " << author << endl;
 	cout << "Publisher: " << publisher << endl;
@@ -93,10 +92,8 @@ void Book::print() {
 	cout << "Book Type: " << bookType << endl;
 }
 
-long long Book::getValueOfBook() const {
+inline long long Book::getValueOfBook() {
 	long long sum = 0;
-	std::stringstream ss(isbn);
-	ss >> sum;
 	for (char c : author) {
 		sum += int(c);
 	}
@@ -106,14 +103,19 @@ long long Book::getValueOfBook() const {
 	for (char c : publisher) {
 		sum += int(c);
 	}
-
+	for (char c : isbn) {
+		if (isdigit(c)) {
+			int digit = c - '0';
+			sum = sum * 10 + digit;
+		}
+	}
 	for (char c : category) {
 		sum += int(c);
 	}
 	return sum;
 }
 
-bool Book::operator==(const Book& book) {
+inline bool Book::operator==(const Book& book) const {
 	if (title == book.title && author == book.author && publisher == book.publisher && isbn == book.isbn && category == book.category && price == book.price && available == book.available && quantity == book.quantity && bookType == book.bookType) {
 		return true;
 	}
@@ -121,17 +123,7 @@ bool Book::operator==(const Book& book) {
 		return false;
 	}
 }
-
-bool Book::operator!=(const Book& book) {
-	if (title != book.title || author != book.author || publisher != book.publisher || isbn != book.isbn || category != book.category || price != book.price || available != book.available || quantity != book.quantity || bookType != book.bookType) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-void Book::operator=(const Book& book) {
+inline void Book::operator=(const Book& book) {
 	title = book.title;
 	author = book.author;
 	publisher = book.publisher;
@@ -144,7 +136,7 @@ void Book::operator=(const Book& book) {
 
 }
 
-bool Book::operator>(Book& book) const {
+inline bool Book::operator>(Book& book) {
 	if (this->getValueOfBook() > book.getValueOfBook()) {
 		return true;
 	}
@@ -153,7 +145,7 @@ bool Book::operator>(Book& book) const {
 	}
 
 }
-bool Book::operator<(Book& book) const {
+inline bool Book::operator<(Book& book) {
 	if (this->getValueOfBook() < book.getValueOfBook()) {
 		return true;
 	}
@@ -163,9 +155,7 @@ bool Book::operator<(Book& book) const {
 
 }
 
-ostream& operator<<(ostream& out, const Book& book) {
-	out << book.getValueOfBook() << endl;
-	/*
+inline ostream& operator<<(ostream& out, Book book) {
 	out << "Title: " << book.title << endl;
 	out << "Author: " << book.author << endl;
 	out << "Publisher: " << book.publisher << endl;
@@ -175,6 +165,5 @@ ostream& operator<<(ostream& out, const Book& book) {
 	out << "Available: " << book.available << endl;
 	out << "Quantity: " << book.quantity << endl;
 	out << "Book Type: " << book.bookType << endl;
-	*/
 	return out;
 }

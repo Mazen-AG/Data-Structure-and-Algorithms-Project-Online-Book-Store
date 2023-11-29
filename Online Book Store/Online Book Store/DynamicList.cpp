@@ -1,9 +1,16 @@
-#include "Dynamic Array.h"
+#include "DynamicArray.h"
+
 #include <cassert>
-#include <new>
 
 using namespace std;
 
+template <typename T>
+List<T>::List() {
+    mySize = 0;
+    myCapacity = 100;
+    myArray = new(nothrow) T[myCapacity];
+    assert(myArray != nullptr);
+}
 template <typename T>
 List<T>::List(int maxSize){
     mySize = 0;
@@ -15,6 +22,16 @@ List<T>::List(int maxSize){
 template <typename T>
 List<T>::~List(){
     delete[] myArray;
+}
+
+template <typename T>
+T& List<T>::operator[](int index) {
+    if (index < 0 || index >= mySize) {
+        // Handle index out of range error, throw exception, or return a default value
+        // For demonstration purposes, let's throw an exception
+        throw out_of_range("Index out of range");
+    }
+    return myArray[index];
 }
 
 template <typename T>
@@ -92,6 +109,7 @@ void List<T>::insert(T item, int pos){
     mySize++;
 }
 
+
 template <typename T>
 void List<T>::erase(int pos){
     if (mySize == 0){
@@ -110,3 +128,4 @@ void List<T>::erase(int pos){
 
     mySize--;
 }
+
