@@ -124,7 +124,6 @@
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Catalog.cpp" />
-    <ClCompile Include="DynamicArray.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="OrderTracking.cpp" />
     <ClCompile Include="Payment.cpp" />

@@ -9,7 +9,7 @@ using namespace std;
 template <typename T>
 class Search{
 private:
-	List<Book> foundBooks[1];
+	List<Book> foundBooks;
 public:
 	Search();
 	List<Book> searchByTitle(Catalog catalog, string title);
