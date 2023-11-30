@@ -12,7 +12,7 @@ class User {
 	string password;
 	string address;
 	string phoneNumber;
-	List<OrderTracking> orders;
+	List<Order> orders;
 public:
 	User();
 	User(string name, string email, string password, string address, string phoneNumber);
@@ -26,6 +26,6 @@ public:
 	void setPassword(string password);
 	void setAddress(string address);
 	void setPhoneNumber(string phoneNumber);
-	void addOrder(OrderTracking order);
+	void addOrder(Order order);
 	void print();
 };

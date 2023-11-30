@@ -121,7 +121,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Catalog.cpp" />
     <ClCompile Include="MainForm.cpp" />

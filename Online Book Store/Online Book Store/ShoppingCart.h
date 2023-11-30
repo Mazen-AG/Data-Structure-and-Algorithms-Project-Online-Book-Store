@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include "Book.cpp"
-#include "DynamicList.cpp"
+#include "DynamicArray.h"
 using namespace std;
 class ShoppingList {
 private:
