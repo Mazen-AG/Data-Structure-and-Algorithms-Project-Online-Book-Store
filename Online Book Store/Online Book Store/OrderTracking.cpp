@@ -1,7 +1,10 @@
-#include "OrderTracking.h"
+#include "Order Tracking.h"
+#include "BinaryTree.h"
+#include "Catalog.h"
+#include "User.h"
 #include <iostream>
 
-OrderTracking::OrderTracking() {
+Order::Order() {
     orderID = "";
     orderDate = "";
     orderStatus = "";
@@ -10,7 +13,7 @@ OrderTracking::OrderTracking() {
     orderPayment = "";
 }
 
-OrderTracking::OrderTracking(string orderID, string orderDate, string orderStatus, string orderType, string orderAddress, string orderPayment) {
+Order::Order(string orderID, string orderDate, string orderStatus, string orderType, string orderAddress, string orderPayment) {
     this->orderID = orderID;
     this->orderDate = orderDate;
     this->orderStatus = orderStatus;
@@ -19,55 +22,63 @@ OrderTracking::OrderTracking(string orderID, string orderDate, string orderStatu
     this->orderPayment = orderPayment;
 }
 
-string OrderTracking::getOrderID() {
+string Order::getOrderID() {
     return orderID;
 }
 
-string OrderTracking::getOrderDate() {
+string Order::getOrderDate() {
     return orderDate;
 }
 
-string OrderTracking::getOrderStatus() {
+string Order::getOrderStatus() {
     return orderStatus;
 }
 
-string OrderTracking::getOrderType() {
+string Order::getOrderType() {
     return orderType;
 }
 
-string OrderTracking::getOrderAddress() {
+string Order::getOrderAddress() {
     return orderAddress;
 }
 
-string OrderTracking::getOrderPayment() {
+string Order::getOrderPayment() {
     return orderPayment;
 }
 
-void OrderTracking::setOrderID(string orderID) {
+BinaryTree<Order> Order::getAllOrders() {
+    return allOrders;
+}
+
+string Order::generateOrderID() {
+
+    return "";
+}
+void Order::setOrderID(string orderID) {
     this->orderID = orderID;
 }
 
-void OrderTracking::setOrderDate(string orderDate) {
+void Order::setOrderDate(string orderDate) {
     this->orderDate = orderDate;
 }
 
-void OrderTracking::setOrderStatus(string orderStatus) {
+void Order::setOrderStatus(string orderStatus) {
     this->orderStatus = orderStatus;
 }
 
-void OrderTracking::setOrderType(string orderType) {
+void Order::setOrderType(string orderType) {
     this->orderType = orderType;
 }
 
-void OrderTracking::setOrderAddress(string orderAddress) {
+void Order::setOrderAddress(string orderAddress) {
     this->orderAddress = orderAddress;
 }
 
-void OrderTracking::setOrderPayment(string orderPayment) {
+void Order::setOrderPayment(string orderPayment) {
     this->orderPayment = orderPayment;
 }
 
-void OrderTracking::print() {
+void Order::print() {
     cout << "Order ID: " << orderID << endl;
     cout << "Order Date: " << orderDate << endl;
     cout << "Order Status: " << orderStatus << endl;

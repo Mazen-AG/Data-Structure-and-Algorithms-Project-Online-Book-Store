@@ -1,9 +1,7 @@
 #pragma once
-#ifndef BOOK_H
-#define BOOK_H
 using namespace std;
 #include <string>
-
+#include <iostream>
 
 class Book {
 public:
@@ -48,5 +46,4 @@ public:
 
 
 };
-#endif // BOOK_H
 ostream& operator<<(ostream& out, Book book);
