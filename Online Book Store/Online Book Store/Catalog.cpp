@@ -2,13 +2,14 @@
 
 #include <string>
 #include "Book.h"
-//#include "BinaryTree.h"
-//#include "Catalog.h"
+#include "BinaryTree.h"
+#include "Catalog.h"
 
 using namespace std;
 
 BinaryTree<Book> catalog;
 
+/*
 Catalog::Catalog(BinNode<Book>* rootNode) {
 	this->rootNode = rootNode;
 }
@@ -24,3 +25,4 @@ void removeBook(Book book) {
 void print() {
 	//catalog.inOrderTraversal(std::ostream & out, catalog.root);
 }
+*/

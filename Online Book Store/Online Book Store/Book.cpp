@@ -92,27 +92,8 @@ inline void Book::print() {
 	cout << "Book Type: " << bookType << endl;
 }
 
-inline long long Book::getValueOfBook() {
-	long long sum = 0;
-	for (char c : author) {
-		sum += int(c);
-	}
-	for (char c : title) {
-		sum += int(c);
-	}
-	for (char c : publisher) {
-		sum += int(c);
-	}
-	for (char c : isbn) {
-		if (isdigit(c)) {
-			int digit = c - '0';
-			sum = sum * 10 + digit;
-		}
-	}
-	for (char c : category) {
-		sum += int(c);
-	}
-	return sum;
+inline string Book::getValueOfBook() {
+	return getISBN();
 }
 
 inline bool Book::operator==(const Book& book) const {

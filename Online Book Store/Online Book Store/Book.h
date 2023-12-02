@@ -36,7 +36,7 @@ public:
 	void setQuantity(int quantity);
 	void setBookType(string bookType);
 	void print();
-	long long getValueOfBook();
+	string getValueOfBook();
 
 	bool operator==(const Book& book) const;
 	void operator=(const Book& book);

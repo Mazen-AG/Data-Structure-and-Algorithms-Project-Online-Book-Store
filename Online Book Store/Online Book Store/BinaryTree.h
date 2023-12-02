@@ -8,12 +8,12 @@ template <typename T>
 class BinNode {
 public:
 	T data;
-	long long key;
+	string key;
 	BinNode<T>* left;
 	BinNode<T>* right;
 	BinNode();
-	BinNode(long long key);
-	BinNode(long long key, T item);
+	BinNode(string key);
+	BinNode(string key, T item);
 
 
 	friend ostream& operator<<(ostream& out, const BinNode<T>& node);
@@ -34,15 +34,15 @@ public:
 	BinaryTree();
 
 
-	void insert(long long key, T& data);
-	void deleteNode(long long key);
+	void insert(string key, T& data);
+	void deleteNode(string key);
 	BinNode<T>* findMin(BinNode<T>* node) const;
 	BinNode<T>* findMax(BinNode<T>* node) const;
 
 
 	void print(std::ostream& out);
 
-	BinNode<T>* search(const long long key) const;
+	BinNode<T>* search(const string key) const;
 	BinNode<T>* searchBy(const string& factor, const string& factorName) const;
 	BinNode<T>* searchByAuthor(BinNode<T>* node, const string& factorName) const;
 	BinNode<T>* searchByTitle(BinNode<T>* node, const string& factorName) const;
@@ -79,14 +79,14 @@ BinNode<T>::BinNode() :
 
 
 template <typename T>
-BinNode<T>::BinNode(long long key, T item) :
+BinNode<T>::BinNode(string key, T item) :
 	data(item),
 	key(key),
 	left(nullptr),
 	right(nullptr)
 {}
 
-template <typename T>BinNode<T>::BinNode(long long key) :
+template <typename T>BinNode<T>::BinNode(string key) :
 	data(0),
 	key(key),
 	left(nullptr),
@@ -123,7 +123,7 @@ BinNode<T>* BinaryTree<T>::findMax(BinNode<T>* node) const {
 }
 
 template <typename T>
-BinNode<T>* BinaryTree<T>::search(const long long key) const
+BinNode<T>* BinaryTree<T>::search(const string key) const
 {
 
 	BinNode<T>* current = root;
@@ -150,7 +150,7 @@ BinNode<T>* BinaryTree<T>::search(const long long key) const
 
 
 template <typename T>
-void BinaryTree<T>::insert(long long key, T& data) {
+void BinaryTree<T>::insert(string key, T& data) {
 
 	BinNode<T>* newNode = new BinNode<T>(key, data);
 	//std::cout << "Inserting node with key: " << key << std::endl;
@@ -185,7 +185,7 @@ void BinaryTree<T>::insert(long long key, T& data) {
 	}
 }
 template <typename T>
-void BinaryTree<T>::deleteNode(long long key)
+void BinaryTree<T>::deleteNode(string key)
 {
 	BinNode<T>* current = root;
 	BinNode<T>* parent = nullptr;
@@ -297,7 +297,7 @@ void BinaryTree<T>::printNode(std::ostream& out, BinNode<T>* node) {
 
 template <typename T>
 BinNode<T>* BinaryTree<T>::searchBy(const string& factor, const string& factorName) const {
-	long long theSearchISBN = 0;
+	string theSearchISBN = 0;
 	cout << "searchby called" << endl;
 	int switchcase = 0;
 	if (factor == "author") {

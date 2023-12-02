@@ -209,7 +209,7 @@ void Payment::paymentMethod() {
         break;
     default:
         std::cerr << "Invalid choice. Please try again." << std::endl;
-        paymentMethod();
+
     }
 }
 
@@ -256,7 +256,7 @@ void Payment::confirmPayment() {
 
     makeReceipt();
 
-    OrderTracking orderTracking;
+    Order orderTracking;
     orderTracking.setOrderID(generateUniqueOrderID());
     orderTracking.setOrderStatus("Completed");
     orderTracking.setOrderType("Online");
@@ -273,8 +273,7 @@ void Payment::confirmPayment() {
     orderTracking.setOrderPayment(getPaymentMethod());
 
 
-    // Print the receipt
-    printReceipt(receipt);
+    
 }
 
 void Payment::cancelPayment() {
@@ -297,7 +296,7 @@ void Payment::makeReceipt() {
 
     receipt.setDate(buffer);
 
-    receipt.setTime();
+    receipt.setTime("");
 
 
     receipt.setEmail();
