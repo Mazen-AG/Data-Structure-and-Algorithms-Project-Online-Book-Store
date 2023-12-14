@@ -55,7 +55,7 @@ namespace OnlineBookStore {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(373, 365);
+			this->textBox1->Location = System::Drawing::Point(71, 77);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 26);
 			this->textBox1->TabIndex = 0;
@@ -65,7 +65,7 @@ namespace OnlineBookStore {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(905, 742);
+			this->ClientSize = System::Drawing::Size(1001, 847);
 			this->Controls->Add(this->textBox1);
 			this->Name = L"MainForm";
 			this->Text = L"MainForm";
