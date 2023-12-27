@@ -350,7 +350,7 @@ BinNode<T>* BinaryTree<T>::searchBy(const string& factor, const string& factorNa
 		for (char c : factorName) {
 			if (isdigit(c)) {
 				int digit = c - '0';
-				theSearchISBN = theSearchISBN * 10 + digit;
+			//	theSearchISBN = theSearchISBN * 10 + digit;
 			}
 		}
 		return search(theSearchISBN);

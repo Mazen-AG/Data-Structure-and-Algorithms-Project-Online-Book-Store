@@ -6,6 +6,8 @@
 #include "Book.h"
 #include "DynamicArray.h"
 
+
+
 class WishList {
 private:
     List<Book> books;
@@ -14,9 +16,9 @@ private:
 public:
     WishList();
     WishList(int initialCapacity);
-    void addBookToWishList(Book book);
-    void removeBookFromWishList(Book book);
+    void addBookToWishList(Book newbook);
+    void removeBookFromWishList(Book booktoremove);
     void print();
-    List<Book> getWishList();
+   // List<Book> getWishList();
 };
 #endif // gg
