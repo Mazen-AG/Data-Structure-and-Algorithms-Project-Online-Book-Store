@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+*.obj
+Online Book Store/Online Book Store/x64/Debug/Online B.FD2AFE6A.tlog/Online Book Store.lastbuildstate
+Online Book Store/Online Book Store/x64/Debug/Online Book Store.log
