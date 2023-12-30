@@ -1,4 +1,4 @@
-#include <C:\Users\saifh\Desktop\dsproject+sln\dsprojectfixing\WishList.h>
+#include "WishList.h"
 
 WishList::WishList() {
 };

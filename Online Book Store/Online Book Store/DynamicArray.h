@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cassert>
 #include <new>
+#include <string>
 using namespace std;
 
 template <typename T>
@@ -94,7 +95,7 @@ bool List<T>::empty() const {
 }
 
 template <typename T>
-void List<T>::display(ostream& out) const {
+void List<T>::display(std::ostream& out) const {
     for (int i = 0; i < mySize; i++)
         out << myArray[i] << "  ";
 }

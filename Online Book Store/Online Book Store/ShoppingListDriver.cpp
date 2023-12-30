@@ -38,9 +38,9 @@ void ShoppingList::print() {
 List<Book> ShoppingList::getShoppingList() {
     List<Book> shoppingListCopy(100); // Assuming you have a constructor that takes an int parameter
 
-    for (int i = 0; i < size; ++i) {
+  /*  for (int i = 0; i < size; ++i) {
         shoppingListCopy.insert(books[i], i);
-    }
+    } */
     return shoppingListCopy;
 }
 
