@@ -128,7 +128,9 @@
     <ClCompile Include="OrderTracking.cpp" />
     <ClCompile Include="Payment.cpp" />
     <ClCompile Include="Search and Filter.cpp" />
+    <ClCompile Include="ShoppingList.cpp" />
     <ClCompile Include="User.cpp" />
+    <ClCompile Include="WishList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
@@ -142,7 +144,7 @@
     <ClInclude Include="OrderTracking.h" />
     <ClInclude Include="Payment.h" />
     <ClInclude Include="Search and Filter.h" />
-    <ClInclude Include="ShoppingCart.h" />
+    <ClInclude Include="ShoppingList.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="WishList.h" />
   </ItemGroup>
