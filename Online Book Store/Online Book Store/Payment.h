@@ -30,7 +30,7 @@ public:
     int getCCV() const;
     int getExpDate() const;
     int getAmount() const;
-    void PaymentProcess();
+    double PaymentProcess(ShoppingList& list);
 
 };
 

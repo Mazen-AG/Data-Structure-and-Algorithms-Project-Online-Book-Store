@@ -6,6 +6,7 @@
 #include "ShoppingList.h"
 #include "OrderTracking.h"
 #include "User.h"
+#include "Payment.h";
 #include <iostream>
 
 
@@ -45,11 +46,16 @@ WishList W(3);
 	book2.setPrice(4242);
 	ShoppingList shopping;
 
+	CreditCard pay;
+
+	pay.setAmount(4242);
 
 	shopping.addBookToShoppingList(book1);
 	shopping.addBookToShoppingList(book2);
 	shopping.addBookToShoppingList(book3);
-	cout << shopping.totalamount();
+
+
+	cout << pay.PaymentProcess(shopping);
 	
  
 		
