@@ -36,10 +36,7 @@
     <ClCompile Include="Payment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ShoppingListDriver.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WishListDriver.cpp">
+    <ClCompile Include="InventoryManagement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -62,22 +59,22 @@
     <ClInclude Include="ShoppingCart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PaymentProccessing.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="User.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OrderTracking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Inventory Management.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BinaryTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WishList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Payment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InventoryManagement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
