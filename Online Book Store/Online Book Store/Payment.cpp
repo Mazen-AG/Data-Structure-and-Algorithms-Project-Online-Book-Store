@@ -1,327 +1,122 @@
-#include "PaymentProccessing.h"
-#include <string>
-#include <vector>
-#include <chrono>
+#include <iostream>
+#include "Payment.h"
 #include <ctime>
-#include <random>
 
-Payment::CreditCard::CreditCard() {
+CreditCard::CreditCard() : cardname(""), cardnumber(0), CCV(0), expdate(0), amount(0) {}
+
+CreditCard::CreditCard(string cardname, int cardnumber, int CCV, int expdate, int amount)
+    : cardname(cardname), cardnumber(cardnumber), CCV(CCV), expdate(expdate), amount(amount) {}
+
+
+void CreditCard::setCardName(const string& name) {
+    cardname = name;
 }
 
-Payment::CreditCard::CreditCard(int CCV, int cardNumber, string cardName, string cardType, string cardExpDate)
-    : CCV(CCV), cardNumber(cardNumber), cardName(cardName), cardType(cardType), cardExpDate(cardExpDate) {
-    // Parameterized constructor implementation
+void CreditCard::setCardNumber(int number) {
+    cardnumber = number;
 }
 
-void Payment::CreditCard::setCCV(int CCV) {
-    this->CCV = CCV;
+void CreditCard::setCCV(int ccv) {
+    CCV = ccv;
 }
 
-void Payment::CreditCard::setCardNumber(int cardNumber) {
-    this->cardNumber = cardNumber;
+void CreditCard::setExpDate(int date) {
+    expdate = date;
 }
 
-void Payment::CreditCard::setCardName(string cardName) {
-    this->cardName = cardName;
+void CreditCard::setAmount(int amount) {
+    this->amount = amount;
 }
 
-void Payment::CreditCard::setCardType(string cardType) {
-    this->cardType = cardType;
+string CreditCard::getCardName() const {
+    return cardname;
 }
 
-void Payment::CreditCard::setCardExpDate(string cardExpDate) {
-    this->cardExpDate = cardExpDate;
+int CreditCard::getCardNumber() const {
+    return cardnumber;
 }
 
-int Payment::CreditCard::getCCV() {
+int CreditCard::getCCV() const {
     return CCV;
 }
 
-int Payment::CreditCard::getCardNumber() {
-    return cardNumber;
+int CreditCard::getExpDate() const {
+    return expdate;
 }
 
-string Payment::CreditCard::getCardName() {
-    return cardName;
+int CreditCard::getAmount() const {
+    return amount;
 }
 
-string Payment::CreditCard::getCardType() {
-    return cardType;
-}
-
-string Payment::CreditCard::getCardExpDate() {
-    return cardExpDate;
-}
-
-bool Payment::CreditCard::checkCreditCard(CreditCard creditcard) {
-
-    std::string input = creditcard.getCardName();
-
-    //convert input into an integer
-    std::vector<int> creditCardInt;
-    for (int i = 0; i < input.length(); i++)
+void CreditCard::PaymentProcess()
+{
+    if (amount <= shoppinglist.totalamount())
     {
-        //char to int
-        creditCardInt.push_back(input[i] - '0');
+        amount = amount - shoppinglist.totalamount();
     }
-
-    // loop through credit card number backwards
-    for (int i = input.length() - 2; i >= 0; i = i - 2) {
-        //check every digit
-        int tempValue = creditCardInt[i];
-        tempValue = tempValue * 2;
-        if (tempValue > 9) {
-            tempValue = tempValue % 10 + 1;
-        }
-        creditCardInt[i] = tempValue;
-    }
-
-    int total = 0;
-
-    //add all digits
-    for (int i = 0; i < creditCardInt.size(); i++) {
-        total += creditCardInt[i];
-    }
-
-    //check
-    if (total % 10 == 0) {
-        return true;
-    }
-
     else
-        return false;
-
+    {
+        cout << "Your balance is not enough" << endl;
+        return;
+    }
+    return;
 }
 
-void Payment::Recepit::setPaymentMethod(string paymentMethod) {
+void receipt::setPaymentMethod(string paymentMethod) {
     this->paymentMethod = paymentMethod;
 }
 
-void Payment::Recepit::setDate(string date) {
+void receipt::setDate(string date) {
     this->date = date;
 }
 
-void Payment::Recepit::setTime(string time) {
+void receipt::setTime(string time) {
     this->time = time;
 }
 
-void Payment::Recepit::setEmail(string email) {
+void receipt::setEmail(string email) {
     this->email = email;
 }
 
-void Payment::Recepit::setName(string name) {
+void receipt::setName(string name) {
     this->name = name;
 }
 
-void Payment::Recepit::setAddress(string address) {
+void receipt::setAddress(string address) {
     this->address = address;
 }
 
-void Payment::Recepit::setBookType(string bookType) {
-    this->bookType = bookType;
-}
 
-void Payment::Recepit::setTotalAmountPaid(string totalAmountPaid) {
-    this->totaAmountPaid = totalAmountPaid;
-}
-
-void Payment::Recepit::setVAT(string VAT) {
+void receipt::setVAT(string VAT) {
     this->VAT = VAT;
 }
 
-string Payment::Recepit::getPaymentMethod() {
+string receipt::getPaymentMethod() {
     return paymentMethod;
 }
 
-string Payment::Recepit::getDate() {
+string receipt::getDate() {
     return date;
 }
 
-string Payment::Recepit::getTime() {
+string receipt::getTime() {
     return time;
 }
 
-string Payment::Recepit::getEmail() {
+string receipt::getEmail() {
     return email;
 }
 
-string Payment::Recepit::getName() {
+string receipt::getName() {
     return name;
 }
 
-string Payment::Recepit::getAddress() {
+string receipt::getAddress() {
     return address;
 }
 
-string Payment::Recepit::getBookType() {
-    return bookType;
-}
 
-string Payment::Recepit::getTotalAmountPaid() {
-    return totaAmountPaid;
-}
-
-string Payment::Recepit::getVAT() {
+string receipt::getVAT() {
     return VAT;
 }
 
-std::string Payment::generateUniqueOrderID() {
-    // Generate a unique order ID using a random number
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(100000, 999999);
-    int randomComponent = dis(gen);
-
-    return std::to_string(randomComponent);
-}
-
-Payment::Payment() {
-    total = 0;
-    paymentMethod = "";
-}
-
-void Payment::calculateTotal() {
-    // Get the list of books from the shopping cart
-    List<Book> bookList = shoppingCart.getShoppingList();
-
-    // Calculate the total book prices
-    total = 0;
-    for (const Book& book : bookList) {
-        total += book.getPrice();
-    }
-}
-
-void Payment::paymentMethod() {
-    // Ask the user to choose a payment method
-    std::cout << "Choose a payment method:" << std::endl;
-    std::cout << "1. Credit Card" << std::endl;
-    std::cout << "2. PayPal" << std::endl;
-
-    int choice;
-    std::cin >> choice;
-
-    switch (choice) {
-    case 1:
-        paymentMethod = "Credit Card";
-        break;
-    case 2:
-        paymentMethod = "PayPal";
-        break;
-    default:
-        std::cerr << "Invalid choice. Please try again." << std::endl;
-
-    }
-}
-
-void Payment::creditCardPayment(CreditCard creditCard) {
-    
-    std::cout << "Credit Card payment successful!" << std::endl;
-
-}
-
-void Payment::payPalPayment() {
-    string payPalEmail;
-    string payPalPassword;
-
-    cout << "Enter your PayPal email: ";
-    cin >> payPalEmail;
-
-    cout << "Enter your PayPal password: ";
-    cin >> payPalPassword;
-
-    cout << "PayPal payment successful!";
-}
-
-void Payment::print() {
-    std::cout << "Total: " << total << std::endl;
-    std::cout << "Payment Method: " << paymentMethod << std::endl;
-}
-
-void Payment::pay() {
-    calculateTotal();
-    paymentMethod();
-
-    // Check if the payment method and process work
-    if (paymentMethod == "CreditCard") {
-        CreditCard creditCard;
-        creditCardPayment(creditCard);
-    }
-    else{
-        payPalPayment();
-    }
-    
-}
-
-void Payment::confirmPayment() {
-
-    makeReceipt();
-
-    Order orderTracking;
-    orderTracking.setOrderID(generateUniqueOrderID());
-    orderTracking.setOrderStatus("Completed");
-    orderTracking.setOrderType("Online");
-
-
-    if (orderTracking.getBookType() == "ebook") {
-        // For an ebook, the email address is the address
-        orderTracking.setOrderAddress(user.getEmail());
-    }
-    else {
-        orderTracking.setOrderAddress(user.getAddress());
-    }
-
-    orderTracking.setOrderPayment(getPaymentMethod());
-
-
-    
-}
-
-void Payment::cancelPayment() {
-    std::cout << "Payment canceled." << std::endl;
-}
-
-void Payment::makeReceipt() {
-
-    Recepit receipt;
-    
-    receipt.setPaymentMethod(getPaymentMethod());
-
-    // Get the current date and time
-    auto now = std::chrono::system_clock::now();
-    std::time_t now_c = std::chrono::system_clock::to_time_t(now);
-
-    // Convert the current time to a string
-    char buffer[80];
-    std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", std::localtime(&now_c));
-
-    receipt.setDate(buffer);
-
-    receipt.setTime("");
-
-
-    receipt.setEmail();
-    receipt.setName();
-    receipt.setAddress();
-    receipt.setBookType();
-    receipt.setTotalAmountPaid();
-    receipt.setVAT();
-
-    // Set the order tracking details
-    
-    user.addOrder(orderTracking);
-}
-
-void Payment::printReceipt(Recepit receipt) {
-    std::cout << "Receipt Details:" << std::endl;
-    std::cout << "-------------------------" << std::endl;
-    std::cout << "Payment Method: " << receipt.getPaymentMethod() << std::endl;
-    std::cout << "Date: " << receipt.getDate() << std::endl;
-    std::cout << "Time: " << receipt.getTime() << std::endl;
-    std::cout << "Email: " << receipt.getEmail() << std::endl;
-    std::cout << "Name: " << receipt.getName() << std::endl;
-    std::cout << "Address: " << receipt.getAddress() << std::endl;
-    std::cout << "Book Type: " << receipt.getBookType() << std::endl;
-    std::cout << "Total Amount Paid: " << receipt.getTotalAmountPaid() << std::endl;
-    std::cout << "VAT: " << receipt.getVAT() << std::endl;
-    std::cout << "-------------------------" << std::endl;
-}

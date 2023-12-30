@@ -7,22 +7,35 @@
 
 using namespace std;
 
-BinaryTree<Book> catalog;
+//BinaryTree<Book> catalog;
 
-/*
+Catalog::Catalog()
+{
+}
+
 Catalog::Catalog(BinNode<Book>* rootNode) {
 	this->rootNode = rootNode;
 }
 
-void addBook(Book book) {
-	catalog.insert(book);
+
+
+void Catalog::addBook(Book book)
+{
+	catalog.insert(book.getISBN(), book);
 }
 
-void removeBook(Book book) {
-	catalog.deleteNode(book);
+void Catalog::removeBook(Book book)
+{
+	catalog.deleteNode(book.getISBN());
 }
 
-void print() {
+
+
+ void Catalog::print() {
 	//catalog.inOrderTraversal(std::ostream & out, catalog.root);
+	std::ostream& out = std::cout;
+	catalog.printNode(out, catalog.root);
+	
 }
-*/
+
+

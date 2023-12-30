@@ -13,7 +13,8 @@ private:
 
 public:
 	Catalog();
+	Catalog(BinNode<Book>* rootNode);
 	void addBook(Book book);
 	void removeBook(Book book);
-	void print(ostream& out);
+	void print();
 };

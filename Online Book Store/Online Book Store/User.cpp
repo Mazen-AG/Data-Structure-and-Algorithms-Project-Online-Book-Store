@@ -57,9 +57,11 @@ void User::setPhoneNumber(string phoneNumber) {
     this->phoneNumber = phoneNumber;
 }
 
-void User::addOrder(OrderTracking order) {
+
+void User::addOrder(Order order) {
     orders.push_back(order);
-}
+} 
+
 
 void User::print() {
     cout << "User Details:" << endl;
@@ -69,9 +71,11 @@ void User::print() {
     cout << "Address: " << address << endl;
     cout << "Phone Number: " << phoneNumber << endl;
 
-    cout << "Order History:" << endl;
-    for (const auto& order : orders) {
-        order.print();
-        cout << "------------------------" << endl;
-    }
+    /*cout << "Order History:" << endl;
+    std::ostream& out = std::cout;
+
+    cout << orders; */
+   // orders.display(cout);  
+   
+    
 }
