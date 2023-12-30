@@ -48,18 +48,18 @@ int CreditCard::getAmount() const {
     return amount;
 }
 
-void CreditCard::PaymentProcess()
+double CreditCard::PaymentProcess(ShoppingList &list)
 {
-    if (amount <= shoppinglist.totalamount())
+    if (amount <= list.totalamount())
     {
-        amount = amount - shoppinglist.totalamount();
+      return (amount = amount - list.totalamount());
     }
     else
     {
         cout << "Your balance is not enough" << endl;
-        return;
+        return 0;
     }
-    return;
+    
 }
 
 void receipt::setPaymentMethod(string paymentMethod) {
