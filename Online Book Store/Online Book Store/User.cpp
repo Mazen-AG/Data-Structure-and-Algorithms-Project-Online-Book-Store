@@ -9,7 +9,8 @@ User::User() {
     phoneNumber = "";
 }
 
-User::User(string name, string email, string password, string address, string phoneNumber) {
+User::User(string username, string name, string email, string password, string address, string phoneNumber) {
+    this->username = username;
     this->name = name;
     this->email = email;
     this->password = password;
@@ -17,6 +18,9 @@ User::User(string name, string email, string password, string address, string ph
     this->phoneNumber = phoneNumber;
 }
 
+string User::getUsername() {
+    return username;
+}
 string User::getName() {
     return name;
 }
@@ -44,6 +48,11 @@ bool User::getIsAdmin() {
     else {
         return false;
     }
+}
+
+void User::setUsername(string username)
+{
+    this->username = username;
 }
 
 void User::setName(string name) {
@@ -83,19 +92,23 @@ bool User::operator==(const User& user) const {
 
 
 
-void User::print() {
-    cout << "User Details:" << endl;
-    cout << "Name: " << name << endl;
-    cout << "Email: " << email << endl;
-    cout << "Password: " << password << endl;
-    cout << "Address: " << address << endl;
-    cout << "Phone Number: " << phoneNumber << endl;
-
+string User::print() {
+    return   "\nUsername: " + username + "\nName: " + name + "\nEmail: " + email + "\nPassword: " + password +
+        "\nAddress: " + address + "\nPhone Number: " + phoneNumber;
     /*cout << "Order History:" << endl;
     std::ostream& out = std::cout;
 
     cout << orders; */
     // orders.display(cout);  
 
+    /*
+        cout << "User Details:" << endl;
+    cout << "Username: " << username << endl;
+    cout << "Name: " << name << endl;
+    cout << "Email: " << email << endl;
+    cout << "Password: " << password << endl;
+    cout << "Address: " << address << endl;
+    cout << "Phone Number: " << phoneNumber << endl;
+    */
 
 }

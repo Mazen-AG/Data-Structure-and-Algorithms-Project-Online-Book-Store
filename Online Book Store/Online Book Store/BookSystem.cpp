@@ -1,7 +1,7 @@
 #include "BookSystem.h"
 #include <thread>
 
-List<User> BookSystem::BookSystemUsers;
+List<User> BookSystem::systemUsers;
 
 void BookSystem::AvailabilityUpdate() {
 	while (true)
@@ -96,17 +96,35 @@ void BookSystem::viewInventory()
 }
 
 void BookSystem::addUser(const User& user) {
-	BookSystemUsers.push_back(user);
+	for each (User u in systemUsers)
+	{
+		if (user == u) {
+			return;
+		}
+	}
+	systemUsers.push_back(user);
 }
 
-// Static method to get a user by username from BookSystemUsers
+// Static method to get a user by username from systemUsers
 User* BookSystem::getUser(const string& userName) {
-	for (auto& user : BookSystemUsers) {
+	for (auto& user : systemUsers) {
 		if (user.getName() == userName) {
 			return &user;
 		}
 	}
 	return nullptr; // User not found
+}
+
+bool BookSystem::authentication(string username, string password)
+{
+	for each (User u in systemUsers){
+		if(u.getUsername() == username) {
+			if (u.getPassword() == password) {
+				return true;
+			}
+		}
+	}
+	return false;
 }
 
 

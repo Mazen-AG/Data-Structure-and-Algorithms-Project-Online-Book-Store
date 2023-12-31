@@ -334,13 +334,15 @@ namespace OnlineBookStore {
 
 
 
-			User newUser(msclr::interop::marshal_as<std::string>(signup_FirstName_textbox->Text + signup_LastName_textbox->Text)
+			User newUser(msclr::interop::marshal_as<std::string>(signup_UserName_textbox->Text), msclr::interop::marshal_as<std::string>(signup_FirstName_textbox->Text + signup_LastName_textbox->Text)
 				, msclr::interop::marshal_as<std::string>(signup_Password_textbox->Text),
 				msclr::interop::marshal_as<std::string>(signup_Email_textbox->Text),
 				msclr::interop::marshal_as<std::string>(signup_Address_TextBox->Text),
 				msclr::interop::marshal_as<std::string>(signup_PhoneNumber_textbox->Text));
 			BookSystem BookSys;
 			BookSys.addUser(newUser);
+			System::String^ userString = gcnew System::String(newUser.print().c_str());
+			MessageBox::Show("Added User" + userString, "Information", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			BookSys.viewInventory();
 		}
 		else {

@@ -11,7 +11,7 @@ class BookSystem
 private:
 	List<Book> inventory;
 	BinaryTree<Book> inventorytree;
-	static List<User> BookSystemUsers;
+	static List<User> systemUsers;
 	int size;
 	bool bookadding;
 	bool bookremoving;
@@ -28,5 +28,6 @@ public:
 	static void addUser(const User& user); // Make it static
 	static User* getUser(const string& userName); // Make it static
 
+	static bool authentication(string username, string password);
 
 };

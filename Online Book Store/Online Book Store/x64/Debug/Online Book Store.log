@@ -1,6 +1,7 @@
 ﻿  AccountRegister.cpp
   LandingPage.cpp
   Main.cpp
+  User.cpp
   Generating Code...
   AccountRegister.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Online Book Store.vcxproj -> C:\Users\Maz\Documents\GitHub\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\x64\Debug\Online Book Store.exe
