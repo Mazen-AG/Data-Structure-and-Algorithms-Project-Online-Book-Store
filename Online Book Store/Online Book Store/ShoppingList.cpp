@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream> 
 #include "ShoppingList.h"
 
 using namespace std;
@@ -35,6 +36,19 @@ void ShoppingList::print() {
         cout << "Book " << i + 1 << ":" << endl;
         books.display(cout);
     }
+}
+int ShoppingList::getsize()
+{
+    return size;
+}
+string ShoppingList::printstring()
+{
+    stringstream ss;
+    for (int i = 0; i < size; ++i) {
+        ss << "Book " << i + 1 << ":" << endl;
+        books.display(ss);
+    }
+    return ss.str();
 }
 Book ShoppingList::get(int pos)
 {

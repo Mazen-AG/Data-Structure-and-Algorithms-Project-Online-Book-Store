@@ -17,6 +17,8 @@ public:
 	void addBookToShoppingList(Book book);
 	void removeBookFromShoppingList(Book book);
 	void print();
+	string printstring();
+	int getsize();
 	double totalamount();
 	Book get(int pos);
 
