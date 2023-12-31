@@ -39,20 +39,22 @@ namespace OnlineBookStore {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ signup_Address_TextBox;
+
 	protected:
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::CheckBox^ checkBox1;
-	private: System::Windows::Forms::Button^ signup_Signin_Button;
-	private: System::Windows::Forms::Button^ signup_Signup_Button;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::TextBox^ signup_PhoneNumber_textbox;
-	private: System::Windows::Forms::TextBox^ signup_ConfirmPassword_textbox;
-	private: System::Windows::Forms::TextBox^ signup_Password_textbox;
-	private: System::Windows::Forms::TextBox^ signup_Email_textbox;
-	private: System::Windows::Forms::TextBox^ signup_UserName_textbox;
-	private: System::Windows::Forms::TextBox^ signup_LastName_textbox;
 	private: System::Windows::Forms::TextBox^ signup_FirstName_textbox;
+	private: System::Windows::Forms::TextBox^ signup_LastName_textbox;
+	private: System::Windows::Forms::TextBox^ signup_UserName_textbox;
+	private: System::Windows::Forms::TextBox^ signup_PhoneNumber_textbox;
+	private: System::Windows::Forms::TextBox^ signup_Email_textbox;
+	private: System::Windows::Forms::TextBox^ signup_Address_TextBox;
+	private: System::Windows::Forms::TextBox^ signup_Password_textbox;
+	private: System::Windows::Forms::TextBox^ signup_ConfirmPassword_textbox;
+	private: System::Windows::Forms::CheckBox^ checkBox1;
+	private: System::Windows::Forms::Button^ signup_Signup_Button;
+	private: System::Windows::Forms::Button^ signup_Signin_Button;
+
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label4;
@@ -102,7 +104,7 @@ namespace OnlineBookStore {
 			this->signup_Address_TextBox->Location = System::Drawing::Point(21, 497);
 			this->signup_Address_TextBox->Name = L"signup_Address_TextBox";
 			this->signup_Address_TextBox->Size = System::Drawing::Size(622, 43);
-			this->signup_Address_TextBox->TabIndex = 37;
+			this->signup_Address_TextBox->TabIndex = 6;
 			// 
 			// label8
 			// 
@@ -125,7 +127,7 @@ namespace OnlineBookStore {
 			this->checkBox1->Location = System::Drawing::Point(329, 759);
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(356, 32);
-			this->checkBox1->TabIndex = 35;
+			this->checkBox1->TabIndex = 9;
 			this->checkBox1->Text = L"I agree to terms and conditions";
 			this->checkBox1->UseVisualStyleBackColor = false;
 			// 
@@ -136,7 +138,7 @@ namespace OnlineBookStore {
 			this->signup_Signin_Button->Location = System::Drawing::Point(28, 817);
 			this->signup_Signin_Button->Name = L"signup_Signin_Button";
 			this->signup_Signin_Button->Size = System::Drawing::Size(271, 53);
-			this->signup_Signin_Button->TabIndex = 34;
+			this->signup_Signin_Button->TabIndex = 11;
 			this->signup_Signin_Button->Text = L"Sign in";
 			this->signup_Signin_Button->UseVisualStyleBackColor = true;
 			this->signup_Signin_Button->Click += gcnew System::EventHandler(this, &AccountRegister::signup_Signin_Button_Click);
@@ -149,7 +151,7 @@ namespace OnlineBookStore {
 			this->signup_Signup_Button->Location = System::Drawing::Point(28, 744);
 			this->signup_Signup_Button->Name = L"signup_Signup_Button";
 			this->signup_Signup_Button->Size = System::Drawing::Size(271, 53);
-			this->signup_Signup_Button->TabIndex = 33;
+			this->signup_Signup_Button->TabIndex = 10;
 			this->signup_Signup_Button->Text = L"Sign up";
 			this->signup_Signup_Button->UseVisualStyleBackColor = false;
 			this->signup_Signup_Button->Click += gcnew System::EventHandler(this, &AccountRegister::signup_Signup_Button_Click);
@@ -171,7 +173,7 @@ namespace OnlineBookStore {
 			this->signup_PhoneNumber_textbox->Location = System::Drawing::Point(365, 235);
 			this->signup_PhoneNumber_textbox->Name = L"signup_PhoneNumber_textbox";
 			this->signup_PhoneNumber_textbox->Size = System::Drawing::Size(278, 43);
-			this->signup_PhoneNumber_textbox->TabIndex = 31;
+			this->signup_PhoneNumber_textbox->TabIndex = 4;
 			// 
 			// signup_ConfirmPassword_textbox
 			// 
@@ -180,7 +182,7 @@ namespace OnlineBookStore {
 			this->signup_ConfirmPassword_textbox->Location = System::Drawing::Point(372, 620);
 			this->signup_ConfirmPassword_textbox->Name = L"signup_ConfirmPassword_textbox";
 			this->signup_ConfirmPassword_textbox->Size = System::Drawing::Size(278, 43);
-			this->signup_ConfirmPassword_textbox->TabIndex = 30;
+			this->signup_ConfirmPassword_textbox->TabIndex = 8;
 			this->signup_ConfirmPassword_textbox->UseSystemPasswordChar = true;
 			// 
 			// signup_Password_textbox
@@ -190,7 +192,7 @@ namespace OnlineBookStore {
 			this->signup_Password_textbox->Location = System::Drawing::Point(21, 620);
 			this->signup_Password_textbox->Name = L"signup_Password_textbox";
 			this->signup_Password_textbox->Size = System::Drawing::Size(278, 43);
-			this->signup_Password_textbox->TabIndex = 29;
+			this->signup_Password_textbox->TabIndex = 7;
 			this->signup_Password_textbox->UseSystemPasswordChar = true;
 			// 
 			// signup_Email_textbox
@@ -200,7 +202,7 @@ namespace OnlineBookStore {
 			this->signup_Email_textbox->Location = System::Drawing::Point(21, 369);
 			this->signup_Email_textbox->Name = L"signup_Email_textbox";
 			this->signup_Email_textbox->Size = System::Drawing::Size(622, 43);
-			this->signup_Email_textbox->TabIndex = 28;
+			this->signup_Email_textbox->TabIndex = 5;
 			// 
 			// signup_UserName_textbox
 			// 
@@ -209,7 +211,7 @@ namespace OnlineBookStore {
 			this->signup_UserName_textbox->Location = System::Drawing::Point(21, 235);
 			this->signup_UserName_textbox->Name = L"signup_UserName_textbox";
 			this->signup_UserName_textbox->Size = System::Drawing::Size(278, 43);
-			this->signup_UserName_textbox->TabIndex = 27;
+			this->signup_UserName_textbox->TabIndex = 3;
 			// 
 			// signup_LastName_textbox
 			// 
@@ -218,7 +220,7 @@ namespace OnlineBookStore {
 			this->signup_LastName_textbox->Location = System::Drawing::Point(365, 96);
 			this->signup_LastName_textbox->Name = L"signup_LastName_textbox";
 			this->signup_LastName_textbox->Size = System::Drawing::Size(278, 43);
-			this->signup_LastName_textbox->TabIndex = 26;
+			this->signup_LastName_textbox->TabIndex = 2;
 			// 
 			// signup_FirstName_textbox
 			// 
@@ -227,7 +229,7 @@ namespace OnlineBookStore {
 			this->signup_FirstName_textbox->Location = System::Drawing::Point(21, 96);
 			this->signup_FirstName_textbox->Name = L"signup_FirstName_textbox";
 			this->signup_FirstName_textbox->Size = System::Drawing::Size(278, 43);
-			this->signup_FirstName_textbox->TabIndex = 25;
+			this->signup_FirstName_textbox->TabIndex = 1;
 			// 
 			// label6
 			// 
@@ -334,16 +336,17 @@ namespace OnlineBookStore {
 
 
 
-			User newUser(msclr::interop::marshal_as<std::string>(signup_UserName_textbox->Text), msclr::interop::marshal_as<std::string>(signup_FirstName_textbox->Text + signup_LastName_textbox->Text)
-				, msclr::interop::marshal_as<std::string>(signup_Password_textbox->Text),
+			User newUser(
+				msclr::interop::marshal_as<std::string>(signup_UserName_textbox->Text),
+				msclr::interop::marshal_as<std::string>(signup_FirstName_textbox->Text + signup_LastName_textbox->Text),
 				msclr::interop::marshal_as<std::string>(signup_Email_textbox->Text),
+				msclr::interop::marshal_as<std::string>(signup_Password_textbox->Text),
 				msclr::interop::marshal_as<std::string>(signup_Address_TextBox->Text),
 				msclr::interop::marshal_as<std::string>(signup_PhoneNumber_textbox->Text));
 			BookSystem BookSys;
 			BookSys.addUser(newUser);
 			System::String^ userString = gcnew System::String(newUser.print().c_str());
 			MessageBox::Show("Added User" + userString, "Information", MessageBoxButtons::OK, MessageBoxIcon::Information);
-			BookSys.viewInventory();
 		}
 		else {
 			if (signup_Password_textbox->Text != signup_ConfirmPassword_textbox->Text) {

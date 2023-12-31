@@ -1,6 +1,9 @@
 #pragma once
 
 #include "AccountRegister.h"
+#include "BookSystem.h"
+#include <msclr/marshal_cppstd.h>
+#include "TermsAndConditions.h"
 
 namespace OnlineBookStore {
 
@@ -101,6 +104,7 @@ namespace OnlineBookStore {
 			this->label4->Size = System::Drawing::Size(182, 25);
 			this->label4->TabIndex = 22;
 			this->label4->Text = L"terms and conditions";
+			this->label4->Click += gcnew System::EventHandler(this, &LandingPage::label4_Click);
 			// 
 			// termsCheckBox
 			// 
@@ -165,6 +169,7 @@ namespace OnlineBookStore {
 			this->mainForm_Signin_Button->TabIndex = 16;
 			this->mainForm_Signin_Button->Text = L"Sign In";
 			this->mainForm_Signin_Button->UseVisualStyleBackColor = false;
+			this->mainForm_Signin_Button->Click += gcnew System::EventHandler(this, &LandingPage::mainForm_Signin_Button_Click);
 			// 
 			// label3
 			// 
@@ -232,7 +237,6 @@ namespace OnlineBookStore {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"LandingPage";
 			this->Text = L"LandingPage";
-			this->Load += gcnew System::EventHandler(this, &LandingPage::LandingPage_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -245,7 +249,19 @@ namespace OnlineBookStore {
 		this->Show();
 
 	}
-private: System::Void LandingPage_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void mainForm_Signin_Button_Click(System::Object^ sender, System::EventArgs^ e) {
+		BookSystem booksys;
+		if (booksys.authentication(msclr::interop::marshal_as<std::string>(userTextBox->Text), msclr::interop::marshal_as<std::string>(passtextBox->Text))) {
+			MessageBox::Show("Signed in as: " + userTextBox->Text, "Information", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		else {
+			MessageBox::Show("Wrong Username/Password", "Signin failed", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+	}	
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+	TermsAndConditions^ termsForm = gcnew TermsAndConditions;
+	termsForm->ShowDialog();
+
 }
 };
 }

@@ -51,6 +51,12 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TermsAndConditions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserDashboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree.h">
@@ -95,12 +101,21 @@
     <ClInclude Include="LandingPage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TermsAndConditions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UserDashboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Backgrounds\Background1.jpeg">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Backgrounds\Background2.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Backgrounds\Background3.jpeg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
