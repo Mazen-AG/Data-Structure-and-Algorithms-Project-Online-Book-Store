@@ -7,7 +7,7 @@
 using namespace std;
 
 template <typename T>
-class Search{
+class Search {
 private:
 	List<Book> foundBooks;
 public:

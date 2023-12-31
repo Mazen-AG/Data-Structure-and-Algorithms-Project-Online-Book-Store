@@ -37,6 +37,15 @@ string User::getPhoneNumber() {
     return phoneNumber;
 }
 
+bool User::getIsAdmin() {
+    if (isAdmin) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 void User::setName(string name) {
     this->name = name;
 }
@@ -57,10 +66,21 @@ void User::setPhoneNumber(string phoneNumber) {
     this->phoneNumber = phoneNumber;
 }
 
+void User::setAdmin(bool check) {
+    this->isAdmin = check;
+}
+
 
 void User::addOrder(Order order) {
     orders.push_back(order);
-} 
+}
+
+bool User::operator==(const User& user) const {
+    return(name == user.name && email == user.email && password == user.password && address == user.address
+        && phoneNumber == user.phoneNumber && isAdmin == user.isAdmin);
+}
+
+
 
 
 void User::print() {
@@ -75,7 +95,7 @@ void User::print() {
     std::ostream& out = std::cout;
 
     cout << orders; */
-   // orders.display(cout);  
-   
-    
+    // orders.display(cout);  
+
+
 }

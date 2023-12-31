@@ -1,0 +1,114 @@
+#include "BookSystem.h"
+#include <thread>
+
+List<User> BookSystem::BookSystemUsers;
+
+void BookSystem::AvailabilityUpdate() {
+	while (true)
+	{
+		for (int i = 0; i < size; i++)
+		{
+
+		}
+
+		/*for (int i = 0; i < size; i++)
+		{
+			if(inventory.get(i).available)
+				cout << "The Book: " << inventory.get(size).getTitle() << "is availibile";
+			else
+				cout << "The Book: " << inventory.get(size).getTitle() << "is not availibile";
+		}
+		std::this_thread::sleep_for(std::chrono::seconds(5));
+
+
+	/*	if (bookadding)
+		{
+			bookadding = false;
+			if (inventory.get(size).available)
+
+				cout << "The Book: " << inventory.get(size).getTitle() << "is availibile";
+
+			else {
+				cout << "The Book: " << inventory.get(size).getTitle() << "is not availibile";
+
+			}
+		} */
+
+
+	}
+}
+BookSystem::BookSystem() { size = 0; };
+
+BookSystem::BookSystem(int inventorysize) : inventory(inventorysize), size(0), bookadding(false) {};
+
+void BookSystem::addBook(Book newbook)
+{
+	//if(newbook.available)
+
+	inventory.insert(newbook, size);
+	size++;
+	bookadding = true;
+}
+
+void BookSystem::removeBook(Book booktoremove)
+{
+	if (size == 0)
+	{
+		cerr << "*** Inventory is empty ***\n";
+		return;
+	}
+	else for (int i = 0; i < size; i++)
+	{
+		if (booktoremove == inventory.get(i))
+		{
+			removingindex = i;
+			inventory.erase(i);
+			size--;
+
+		}
+	}
+}
+
+void BookSystem::search(const string& factor, const string& factorName)
+{
+
+}
+
+void BookSystem::clear()
+{
+	if (size == 0)
+	{
+		cerr << "*** Inventory is empty ***\n";
+		return;
+	}
+	else
+	{
+		for (int i = size - 1; i >= 0; i--)
+			inventory.erase(i);
+		size = 0;
+		cout << "*** Inventory cleared ***\n";
+	}
+}
+
+void BookSystem::viewInventory()
+{
+	cout << inventory;
+}
+
+void BookSystem::addUser(const User& user) {
+	BookSystemUsers.push_back(user);
+}
+
+// Static method to get a user by username from BookSystemUsers
+User* BookSystem::getUser(const string& userName) {
+	for (auto& user : BookSystemUsers) {
+		if (user.getName() == userName) {
+			return &user;
+		}
+	}
+	return nullptr; // User not found
+}
+
+
+
+

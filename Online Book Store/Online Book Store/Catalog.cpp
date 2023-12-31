@@ -31,11 +31,11 @@ void Catalog::removeBook(Book book)
 
 
 
- void Catalog::print() {
+void Catalog::print() {
 	//catalog.inOrderTraversal(std::ostream & out, catalog.root);
 	std::ostream& out = std::cout;
 	catalog.printNode(out, catalog.root);
-	
+
 }
 
 

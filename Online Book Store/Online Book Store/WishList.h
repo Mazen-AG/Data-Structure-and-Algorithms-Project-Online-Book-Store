@@ -1,5 +1,5 @@
-#ifndef gg
-#define gg
+#pragma once
+
 
 
 #include <iostream>
@@ -19,6 +19,5 @@ public:
     void addBookToWishList(Book newbook);
     void removeBookFromWishList(Book booktoremove);
     void print();
-   // List<Book> getWishList();
+    // List<Book> getWishList();
 };
-#endif // gg

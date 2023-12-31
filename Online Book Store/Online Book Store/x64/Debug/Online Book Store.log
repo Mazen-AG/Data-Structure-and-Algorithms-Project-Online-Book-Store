@@ -1,1 +1,28 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(1220,5): error MSB3644: The reference assemblies for .NETFramework,Version=v4.7.2 were not found. To resolve this, install the Developer Pack (SDK/Targeting Pack) for this framework version or retarget your application. You can download .NET Framework Developer Packs at https://aka.ms/msbuild/developerpacks
+﻿  MainForm.cpp
+C:\Users\Maz\Desktop\Online Book Store\Online Book Store\Online Book Store\SignupForm.h(342,3): error C2065: 'MainForm': undeclared identifier
+  (compiling source file 'MainForm.cpp')
+  
+C:\Users\Maz\Desktop\Online Book Store\Online Book Store\Online Book Store\SignupForm.h(342,13): error C2065: 'mainform': undeclared identifier
+  (compiling source file 'MainForm.cpp')
+  
+C:\Users\Maz\Desktop\Online Book Store\Online Book Store\Online Book Store\SignupForm.h(342,30): error C2061: syntax error: identifier 'MainForm'
+  (compiling source file 'MainForm.cpp')
+  
+C:\Users\Maz\Desktop\Online Book Store\Online Book Store\Online Book Store\SignupForm.h(343,3): error C2065: 'mainform': undeclared identifier
+  (compiling source file 'MainForm.cpp')
+  
+C:\Users\Maz\Desktop\Online Book Store\Online Book Store\Online Book Store\MainForm.cpp(6,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  SignupForm.cpp
+C:\Users\Maz\Desktop\Online Book Store\Online Book Store\Online Book Store\MainForm.h(246,3): error C2065: 'SignupForm': undeclared identifier
+  (compiling source file 'SignupForm.cpp')
+  
+C:\Users\Maz\Desktop\Online Book Store\Online Book Store\Online Book Store\MainForm.h(246,15): error C2065: 'goingToSignUp': undeclared identifier
+  (compiling source file 'SignupForm.cpp')
+  
+C:\Users\Maz\Desktop\Online Book Store\Online Book Store\Online Book Store\MainForm.h(246,37): error C2061: syntax error: identifier 'SignupForm'
+  (compiling source file 'SignupForm.cpp')
+  
+C:\Users\Maz\Desktop\Online Book Store\Online Book Store\Online Book Store\MainForm.h(247,3): error C2065: 'goingToSignUp': undeclared identifier
+  (compiling source file 'SignupForm.cpp')
+  
+  Generating Code...

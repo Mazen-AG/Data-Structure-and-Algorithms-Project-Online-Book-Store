@@ -14,7 +14,7 @@ void WishList::addBookToWishList(Book newbook)
 
 void WishList::removeBookFromWishList(Book booktoremove)
 {
-	
+
 	if (size == 0)
 	{
 		cerr << "*** Wishlist is empty ***\n";
@@ -26,7 +26,7 @@ void WishList::removeBookFromWishList(Book booktoremove)
 		{
 			books.erase(i);
 			size--;
-			
+
 		}
 	}
 }

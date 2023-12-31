@@ -120,6 +120,8 @@ bool Book::operator==(const Book& book) const {
     return (title == book.title && author == book.author && publisher == book.publisher &&
         isbn == book.isbn && category == book.category && price == book.price &&
         available == book.available && quantity == book.quantity && bookType == book.bookType);
+
+
 }
 void Book::operator=(const Book& book)
 {
@@ -141,7 +143,7 @@ bool Book::operator>(Book& book)
 bool Book::operator<(Book& book)
 {
     return (this->getValueOfBook() < book.getValueOfBook());
- 
+
 }
 /*
 void Book::operator=(const Book& book) {

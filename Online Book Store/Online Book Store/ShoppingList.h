@@ -19,6 +19,6 @@ public:
 	void print();
 	double totalamount();
 	Book get(int pos);
-	
+
 };
 
