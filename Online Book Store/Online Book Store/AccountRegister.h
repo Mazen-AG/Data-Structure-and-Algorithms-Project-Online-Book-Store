@@ -324,6 +324,7 @@ namespace OnlineBookStore {
 		}
 #pragma endregion
 	private: System::Void signup_Signin_Button_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
 		
 	}
 	private: System::Void signup_Signup_Button_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -340,9 +341,28 @@ namespace OnlineBookStore {
 				msclr::interop::marshal_as<std::string>(signup_PhoneNumber_textbox->Text));
 			BookSystem BookSys;
 			BookSys.addUser(newUser);
+			BookSys.viewInventory();
 		}
 		else {
-			MessageBox::Show("This is a warning message.", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			if (signup_Password_textbox->Text != signup_ConfirmPassword_textbox->Text) {
+				MessageBox::Show("Please make sure confirmed password matches password.", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			}
+			else if (signup_FirstName_textbox->Text == "") {
+				MessageBox::Show("Please enter your first name.", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			}
+			else if (signup_Password_textbox->Text == "") {
+				MessageBox::Show("please enter a password.", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			}
+			else if (signup_Email_textbox->Text == "") {
+				MessageBox::Show("Please enter your email.", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			}
+			else if (signup_Address_TextBox->Text == "") {
+				MessageBox::Show("Please enter your address.", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			}
+			else if (signup_PhoneNumber_textbox->Text != "") {
+				MessageBox::Show("Please enter your PhoneNumber.", "Warning", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			}
+			
 		}
 	}
 };
