@@ -1,6 +1,0 @@
-C:\Users\USER\Desktop\DSPROJECTTTTT\Online Book Store\Online Book Store\x64\Debug\Online Book Store.vcxproj.AssemblyReference.cache
-C:\Users\USER\Desktop\DSPROJECTTTTT\Online Book Store\Online Book Store\x64\Debug\OnlineBookStore.AccountRegister.resources
-C:\Users\USER\Desktop\DSPROJECTTTTT\Online Book Store\Online Book Store\x64\Debug\OnlineBookStore.LandingPage.resources
-C:\Users\USER\Desktop\DSPROJECTTTTT\Online Book Store\Online Book Store\x64\Debug\OnlineBookStore.TermsAndConditions.resources
-C:\Users\USER\Desktop\DSPROJECTTTTT\Online Book Store\Online Book Store\x64\Debug\Online Book Store.vcxproj.GenerateResource.cache
-C:\Users\USER\Desktop\DSPROJECTTTTT\Online Book Store\Online Book Store\x64\Debug\OnlineBookStore.PaymentForm.resources
