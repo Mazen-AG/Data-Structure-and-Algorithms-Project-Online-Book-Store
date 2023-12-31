@@ -2,8 +2,10 @@
 
 #include "AccountRegister.h"
 #include "BookSystem.h"
-#include <msclr/marshal_cppstd.h>
+#include "UserDashboard.h"
 #include "TermsAndConditions.h"
+#include <msclr/marshal_cppstd.h>
+
 
 namespace OnlineBookStore {
 
@@ -29,6 +31,7 @@ namespace OnlineBookStore {
 			//TODO: Add the constructor code here
 			//
 		}
+
 
 	protected:
 		/// <summary>
@@ -250,9 +253,15 @@ namespace OnlineBookStore {
 
 	}
 	private: System::Void mainForm_Signin_Button_Click(System::Object^ sender, System::EventArgs^ e) {
+		std::string usernameText = msclr::interop::marshal_as<std::string>(userTextBox->Text);
+		std::string passwordText = msclr::interop::marshal_as<std::string>(passtextBox->Text);
 		BookSystem booksys;
-		if (booksys.authentication(msclr::interop::marshal_as<std::string>(userTextBox->Text), msclr::interop::marshal_as<std::string>(passtextBox->Text))) {
+		if (booksys.authentication(usernameText, passwordText)) {
 			MessageBox::Show("Signed in as: " + userTextBox->Text, "Information", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			UserDashboard^ userDashboard = gcnew UserDashboard;
+			this->Hide();
+			userDashboard->ShowDialog();
+			this->Show();
 		}
 		else {
 			MessageBox::Show("Wrong Username/Password", "Signin failed", MessageBoxButtons::OK, MessageBoxIcon::Information);

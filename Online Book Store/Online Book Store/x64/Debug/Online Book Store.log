@@ -1,10 +1,21 @@
-﻿  AccountRegister.cpp
-  LandingPage.cpp
+﻿  LandingPage.cpp
   Main.cpp
-  TermsAndConditions.cpp
+  UserDashboard.cpp
   Generating Code...
   AccountRegister.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-OrderTracking.obj : warning LNK4099: PDB '' was not found with 'OrderTracking.obj' or at ''; linking object as if no debug info
-Payment.obj : warning LNK4099: PDB '' was not found with 'Payment.obj' or at ''; linking object as if no debug info
-User.obj : warning LNK4099: PDB '' was not found with 'User.obj' or at ''; linking object as if no debug info
+.NETFramework,Version=v4.7.2.AssemblyAttributes.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+UserDashboard.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+UserDashboard.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+TermsAndConditions.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+TermsAndConditions.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+ShoppingList.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+SearchAndFilter.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+Payment.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+OrderTracking.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+Main.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+LandingPage.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+Catalog.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+BookSystem.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+Book.obj : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
+MSVCRTD.lib(new_array_nothrow.obj) : warning LNK4020: a type record in '' is corrupted; some symbols and types may not be accessible from the debugger
   Online Book Store.vcxproj -> C:\Users\Maz\Documents\GitHub\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\x64\Debug\Online Book Store.exe
