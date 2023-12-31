@@ -115,7 +115,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -177,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TermsAndConditions.resx">
       <DependentUpon>TermsAndConditions.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDashboard.resx">
+      <DependentUpon>UserDashboard.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
