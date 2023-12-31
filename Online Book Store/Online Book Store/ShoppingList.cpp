@@ -44,9 +44,9 @@ Book ShoppingList::get(int pos)
 double ShoppingList::totalamount()
 {
     for (int i = 0; i < size; i++)
-        total += books.get(i).getPrice();
+    total += books.get(i).getPrice();
     return total;
-
+   
 }
 
 

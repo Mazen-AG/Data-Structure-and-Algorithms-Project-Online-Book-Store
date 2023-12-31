@@ -42,8 +42,9 @@ public:
 	bool operator==(const Book& book) const;
 	void operator=(const Book& book);
 	bool operator>(Book& book);
-	bool operator<(Book& book);
+	bool operator<(Book& book); 
 
 
 	friend std::ostream& operator<<(ostream& out, Book book);
 };
+ 

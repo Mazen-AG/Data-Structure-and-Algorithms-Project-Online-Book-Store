@@ -22,15 +22,12 @@ public:
     void insert(T item, int pos);
 
     void erase(int pos);
-    void erase(T item);
 
     void display(ostream& out) const;
 
     void push_back(T item);
 
     T get(int pos) const;
-    T* begin() const;
-    T* end() const;
 
 private:
     int mySize;
@@ -130,7 +127,6 @@ void List<T>::insert(T item, int pos) {
     mySize++;
 }
 
-
 template <typename T>
 void List<T>::erase(int pos) {
     if (mySize == 0) {
@@ -150,25 +146,6 @@ void List<T>::erase(int pos) {
     mySize--;
 }
 
-template <typename T>
-void List<T>::erase(T item) {
-    if (mySize == 0) {
-        cerr << "*** List is empty ***\n";
-        return;
-    }
-
-    for (int i = 0; i < mySize; i++) {
-        if (myArray[i] == item;)
-        {
-            erase(i);
-            mySize--;
-            return;
-        }
-    }
-    cerr << "*** Item doesn't exist in the lis ***\n";
-
-}
-
 
 template <typename T>
 void List<T>::push_back(T item) {
@@ -185,11 +162,4 @@ T List<T>::get(int pos) const {
     return myArray[pos];
 }
 
-template <typename T>
-T* List<T>::begin() const {
-    return myArray;
-}
-template <typename T>
-T* List<T>::end() const {
-    return myArray + mySize;
-}
+
