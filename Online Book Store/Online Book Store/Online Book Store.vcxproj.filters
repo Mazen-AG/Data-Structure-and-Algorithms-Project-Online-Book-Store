@@ -15,51 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MainForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Book.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BookSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Catalog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="OrderTracking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Payment.cpp">
+    <ClCompile Include="Search and Filter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SearchAndFilter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ShoppingList.cpp">
+    <ClCompile Include="Catalog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="User.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WishList.cpp">
+    <ClCompile Include="Payment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AccountRegister.cpp">
+    <ClCompile Include="InventoryManagement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LandingPage.cpp">
+    <ClCompile Include="ShoppingList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="PaymentForm.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="receipt.cpp">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinaryTree.h">
+    <ClInclude Include="MainForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Book.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BookSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Catalog.h">
@@ -68,40 +62,35 @@
     <ClInclude Include="DynamicArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OrderTracking.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Payment.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SearchAndFilter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ShoppingList.h">
+    <ClInclude Include="Search and Filter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="User.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OrderTracking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="WishList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="Payment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AccountRegister.h">
+    <ClInclude Include="InventoryManagement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LandingPage.h">
+    <ClInclude Include="ShoppingList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Backgrounds\Background1.jpeg">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Backgrounds\Background2.jpeg">
-      <Filter>Resource Files</Filter>
-    </Image>
+    <ClInclude Include="PaymentForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="receipt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

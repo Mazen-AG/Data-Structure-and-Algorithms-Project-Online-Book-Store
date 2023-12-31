@@ -7,44 +7,48 @@
 
 class CreditCard {
 private:
-	User user;
-	ShoppingList shoppinglist;
+    User user;
+    ShoppingList shoppinglist;
 	string cardname;
 	int cardnumber;
 	int CCV;
 	int expdate;
 	int amount;
+	string address;
 
 public:
 	CreditCard();
-	CreditCard(string cardname, int cardnumber, int CCV, int expdate, int amount);
+	CreditCard(string cardname, int cardnumber,int CCV,int expdate,int amount);
+    
+    void setCardName(const string& name);
+    void setCardNumber(int number);
+    void setCCV(int ccv);
+    void setExpDate(int date);
+    void setAmount(int amount);
+	void setAddress(string address);
+	
 
-	void setCardName(const string& name);
-	void setCardNumber(int number);
-	void setCCV(int ccv);
-	void setExpDate(int date);
-	void setAmount(int amount);
-
-	string getCardName() const;
-	int getCardNumber() const;
-	int getCCV() const;
-	int getExpDate() const;
-	int getAmount() const;
-	double PaymentProcess(ShoppingList& list);
+    string getCardName() const;
+    int getCardNumber() const;
+    int getCCV() const;
+    int getExpDate() const;
+    int getAmount() const;
+	string getAddress();
+    double PaymentProcess(ShoppingList& list);
 
 };
 
-class receipt
+class receipt 
 {
 private:
-	string paymentMethod;
-	string date;
-	string time;
-	string email;
-	string name;
-	string address;
-	string totaAmountPaid;
-	string VAT;
+    string paymentMethod;
+    string date;
+    string time;
+    string email;
+    string name;
+    string address;
+    string totaAmountPaid;
+    string VAT;
 
 public:
 	void setPaymentMethod(string paymentMethod);
