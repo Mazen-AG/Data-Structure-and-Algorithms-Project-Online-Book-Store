@@ -1,7 +1,10 @@
 ﻿  AccountRegister.cpp
   LandingPage.cpp
   Main.cpp
-  User.cpp
+  TermsAndConditions.cpp
   Generating Code...
   AccountRegister.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+OrderTracking.obj : warning LNK4099: PDB '' was not found with 'OrderTracking.obj' or at ''; linking object as if no debug info
+Payment.obj : warning LNK4099: PDB '' was not found with 'Payment.obj' or at ''; linking object as if no debug info
+User.obj : warning LNK4099: PDB '' was not found with 'User.obj' or at ''; linking object as if no debug info
   Online Book Store.vcxproj -> C:\Users\Maz\Documents\GitHub\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\x64\Debug\Online Book Store.exe

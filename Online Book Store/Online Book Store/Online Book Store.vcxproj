@@ -130,7 +130,9 @@
     <ClCompile Include="Payment.cpp" />
     <ClCompile Include="SearchAndFilter.cpp" />
     <ClCompile Include="ShoppingList.cpp" />
+    <ClCompile Include="TermsAndConditions.cpp" />
     <ClCompile Include="User.cpp" />
+    <ClCompile Include="UserDashboard.cpp" />
     <ClCompile Include="WishList.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,7 +152,13 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="SearchAndFilter.h" />
     <ClInclude Include="ShoppingList.h" />
+    <ClInclude Include="TermsAndConditions.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="User.h" />
+    <ClInclude Include="UserDashboard.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="WishList.h" />
   </ItemGroup>
   <ItemGroup>
@@ -160,10 +168,14 @@
     <EmbeddedResource Include="LandingPage.resx">
       <DependentUpon>LandingPage.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TermsAndConditions.resx">
+      <DependentUpon>TermsAndConditions.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Backgrounds\Background1.jpeg" />
     <Image Include="Backgrounds\Background2.jpeg" />
+    <Image Include="Backgrounds\Background3.jpeg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

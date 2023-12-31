@@ -105,14 +105,14 @@ void BookSystem::addUser(const User& user) {
 	systemUsers.push_back(user);
 }
 
-// Static method to get a user by username from systemUsers
-User* BookSystem::getUser(const string& userName) {
-	for (auto& user : systemUsers) {
-		if (user.getName() == userName) {
+
+User* BookSystem::getUser(string username, string password) {
+	for (User user : systemUsers) {
+		if (user.getName() == username && user.getPassword() == password) {
 			return &user;
 		}
 	}
-	return nullptr; // User not found
+	return nullptr; 
 }
 
 bool BookSystem::authentication(string username, string password)

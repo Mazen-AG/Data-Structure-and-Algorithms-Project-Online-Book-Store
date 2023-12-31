@@ -26,7 +26,7 @@ public:
 	void viewInventory();
 	void AvailabilityUpdate();
 	static void addUser(const User& user); // Make it static
-	static User* getUser(const string& userName); // Make it static
+	static User* getUser(const string username, string password); // Make it static
 
 	static bool authentication(string username, string password);
 
