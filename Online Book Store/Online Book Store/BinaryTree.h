@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 #include "Book.h"
-
+#include "DynamicArray.h"
+#include "RegularExpression.h"
+#include <regex>
 
 
 template <typename T>
@@ -43,13 +45,13 @@ public:
 	void print(std::ostream& out);
 
 	BinNode<T>* search(const string key) const;
-	BinNode<T>* searchBy(const string& factor, const string& factorName) const;
-	BinNode<T>* searchByAuthor(BinNode<T>* node, const string& factorName) const;
-	BinNode<T>* searchByTitle(BinNode<T>* node, const string& factorName) const;
-	BinNode<T>* searchByPublisher(BinNode<T>* node, const string& factorName) const;
-	BinNode<T>* searchByCategory(BinNode<T>* node, const string& factorName) const;
-	BinNode<T>* searchByAvailability(BinNode<T>* node, const bool& factorName) const;
-	BinNode<T>* searchByBookType(BinNode<T>* node, const string& factorName) const;
+	List<Book> searchBy(const string& factor, const string& factorName, BinNode<T>* startnode) const;
+	List<Book> searchByAuthor(BinNode<T>* node, const string& factorName) const;
+	List<Book> searchByTitle(BinNode<T>* node, const string& factorName) const;
+	List<Book> searchByPublisher(BinNode<T>* node, const string& factorName) const;
+	List<Book> searchByCategory(BinNode<T>* node, const string& factorName) const;
+	List<Book> searchByAvailability(BinNode<T>* node, const bool& factorName) const;
+	List<Book> searchByBookType(BinNode<T>* node, const string& factorName) const;
 
 
 	//private:
@@ -296,7 +298,7 @@ void BinaryTree<T>::printNode(std::ostream& out, BinNode<T>* node) {
 }
 
 template <typename T>
-BinNode<T>* BinaryTree<T>::searchBy(const string& factor, const string& factorName) const {
+List<Book> BinaryTree<T>::searchBy(const string& factor, const string& factorName, BinNode<T>* startnode) const {
 	string theSearchISBN = 0;
 	cout << "searchby called" << endl;
 	int switchcase = 0;
@@ -328,22 +330,22 @@ BinNode<T>* BinaryTree<T>::searchBy(const string& factor, const string& factorNa
 	switch (switchcase) {
 	case 1:
 		cout << "searching by " << factorName << endl;
-		return searchByAuthor(root, factorName);
+		return searchByAuthor(startnode, factorName);
 	case 2:
 		cout << "searching by " << factorName << endl;
-		return searchByTitle(root, factorName);
+		return searchByTitle(startnode, factorName);
 	case 3:
 		cout << "searching by " << factorName << endl;
-		return searchByPublisher(root, factorName);
+		return searchByPublisher(startnode, factorName);
 	case 4:
 		cout << "searching by " << factorName << endl;
-		return searchByCategory(root, factorName);
+		return searchByCategory(startnode, factorName);
 	case 5:
 		cout << "searching by " << factorName << endl;
-		return searchByAvailability(root, true);
+		return searchByAvailability(startnode, true);
 	case 6:
 		cout << "searching by " << factorName << endl;
-		return searchByBookType(root, factorName);
+		return searchByBookType(startnode, factorName);
 	case 7:
 		cout << "searching by " << factorName << endl;
 
@@ -361,116 +363,128 @@ BinNode<T>* BinaryTree<T>::searchBy(const string& factor, const string& factorNa
 }
 
 template <typename T>
-BinNode<T>* BinaryTree<T>::searchByAuthor(BinNode<T>* node, const string& factorName) const {
+List<Book> BinaryTree<T>::searchByAuthor(BinNode<T>* node, const string& factorName) const {
+	RegularExpression regularexpression;
+	List<Book> books;
 	if (!node) {
-		return nullptr;
+		return books;
 	}
 
 	BinNode<T>* result = searchByAuthor(node->left, factorName);
 
-	if (node->data.getAuthor() == factorName) {
-		result = node;
+	if (regularexpression.matchFound(node->data.getAuthor(), factorName)) {
+		books.push_back(node->data);
 	}
 
 	if (!result) {
 		result = searchByAuthor(node->right, factorName);
 	}
 
-	return result;
+	return nullptr;
 }
 
 template <typename T>
-BinNode<T>* BinaryTree<T>::searchByTitle(BinNode<T>* node, const string& factorName) const {
+List<Book> BinaryTree<T>::searchByTitle(BinNode<T>* node, const string& factorName) const {
+	RegularExpression regularexpression;
+	List<Book> books;
 	if (!node) {
-		return nullptr;
+		return books;
 	}
 
 	BinNode<T>* result = searchByTitle(node->left, factorName);
 
-	if (node->data.getTitle() == factorName) {
-		result = node;
+	if (regularexpression.matchFound(node->data.getTitle(),factorName)) {
+		books.push_back(node->data);
 	}
 
 	if (!result) {
 		result = searchByTitle(node->right, factorName);
 	}
 
-	return result;
+	return nullptr;
 }
 
 template <typename T>
-BinNode<T>* BinaryTree<T>::searchByPublisher(BinNode<T>* node, const string& factorName) const {
+List<Book> BinaryTree<T>::searchByPublisher(BinNode<T>* node, const string& factorName) const {
+	RegularExpression regularexpression;
+	List<Book> books;
 	if (!node) {
-		return nullptr;
+		return books;
 	}
 
 	BinNode<T>* result = searchByPublisher(node->left, factorName);
 
-	if (node->data.getPublisher() == factorName) {
-		result = node;
+	if (regularexpression.matchFound(node->data.getPublisher(), factorName)) {
+		books.push_back(node->data);
 	}
 
 	if (!result) {
 		result = searchByPublisher(node->right, factorName);
 	}
 
-	return result;
+	return nullptr;
 }
 
 template <typename T>
-BinNode<T>* BinaryTree<T>::searchByCategory(BinNode<T>* node, const string& factorName) const {
+List<Book> BinaryTree<T>::searchByCategory(BinNode<T>* node, const string& factorName) const {
+	RegularExpression regularexpression;
+	List<Book> books;
 	if (!node) {
-		return nullptr;
+		return books;
 	}
 
 	BinNode<T>* result = searchByCategory(node->left, factorName);
-	if (node->data.getCategory() == factorName) {
-		result = node;
+	if (regularexpression.matchFound(node->data.getCategory() ,factorName)) {
+		books.push_back(node->data);
 	}
 
 	if (!result) {
 		result = searchByCategory(node->right, factorName);
 	}
 
-	return result;
+	return nullptr;
 }
 
 template <typename T>
-BinNode<T>* BinaryTree<T>::searchByAvailability(BinNode<T>* node, const bool& factorName) const {
+List<Book> BinaryTree<T>::searchByAvailability(BinNode<T>* node, const bool& factorName) const {
+	RegularExpression regularexpression;
+	List<Book> books;
 	if (!node) {
-		return nullptr;
+		return books;
 	}
 
 	BinNode<T>* result = searchByAvailability(node->left, factorName);
 
-	if (node->data.getAvailable() == factorName) {
-		result = node;
+	if (regularexpression.matchFound(node->data.getAvailable(), factorName)) {
+		books.push_back(node->data);
 	}
 
 	if (!result) {
 		result = searchByAvailability(node->right, factorName);
 	}
 
-	return result;
+	return nullptr;
 }
 
 template <typename T>
-BinNode<T>* BinaryTree<T>::searchByBookType(BinNode<T>* node, const string& factorName) const {
+List<Book> BinaryTree<T>::searchByBookType(BinNode<T>* node, const string& factorName) const {
+	RegularExpression regularexpression;
+	List<Book> books;
 	if (!node) {
-		return nullptr;
+		return books;
 	}
 
 	BinNode<T>* result = searchByBookType(node->left, factorName);
 
-	if (node->data.getBookType() == factorName) {
-		result = node;
+	if (regularexpression.matchFound(node->data.getBookType(), factorName)) {
+		books.push_back(node->data);
 	}
 
 	if (!result) {
 		result = searchByBookType(node->right, factorName);
 	}
 
-	return result;
+	return nullptr;
 }
 
 template <typename T>
@@ -504,37 +518,3 @@ template <typename T>
 bool BinNode<T>::operator!() const {
 	return (this == nullptr);
 }
-/*
-template <typename T>
-BinNode<Book>* BinaryTree<T>::searchBy(std::string factor, std::string factorName) const {
-	cout << "searchby called" << endl;
-	cout << "factor: " << factor << endl;
-	cout << "root: " << root << "root data" << root->data << endl;
-	BinNode<Book>* current = root;
-	if (factor == "author") {
-		cout << "searching by " << factorName << endl;
-		current = current->searchByAuthor(factor, current);
-	}
-	return current;
-}
-
-template <typename T>
-BinNode<T>* BinNode<T>::searchByAuthor(const std::string& author, BinNode<T>* node) const {
-	if (!node) {
-		return nullptr;  // Author not found
-	}
-
-	if (node->data.getAuthor() == author) {
-		return node;  // Author found
-	}
-
-	// Recursively search in the left and right subtrees
-	BinNode<T>* leftResult = searchByAuthor(author, node->left);
-	if (leftResult) {
-		return leftResult;  // Return if found in the left subtree
-	}
-
-	BinNode<T>* rightResult = searchByAuthor(author, node->right);
-	return rightResult;  // Return result from the right subtree
-}
-*/

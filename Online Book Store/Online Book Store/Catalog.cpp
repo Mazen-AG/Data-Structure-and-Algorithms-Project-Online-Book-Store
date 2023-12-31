@@ -5,9 +5,11 @@
 #include "BinaryTree.h"
 #include "Catalog.h"
 
+
+
 using namespace std;
 
-//BinaryTree<Book> catalog;
+BinaryTree<Book> Catalog::catalog;
 
 Catalog::Catalog()
 {

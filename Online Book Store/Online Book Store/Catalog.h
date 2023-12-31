@@ -7,7 +7,7 @@ using namespace std;
 
 class Catalog {
 private:
-	BinaryTree<Book> catalog;
+	static BinaryTree<Book> catalog;
 	int size = 0;
 	BinNode<Book>* rootNode;
 

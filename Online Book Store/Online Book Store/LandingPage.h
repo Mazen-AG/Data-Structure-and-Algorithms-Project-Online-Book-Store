@@ -261,7 +261,7 @@ namespace OnlineBookStore {
 			UserDashboard^ userDashboard = gcnew UserDashboard;
 			this->Hide();
 			userDashboard->ShowDialog();
-			this->Show();
+			this->Close();
 		}
 		else {
 			MessageBox::Show("Wrong Username/Password", "Signin failed", MessageBoxButtons::OK, MessageBoxIcon::Information);
