@@ -306,6 +306,7 @@ namespace OnlineBookStore {
 			// SignupForm
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(720, 960);
 			this->Controls->Add(this->signup_Address_TextBox);
 			this->Controls->Add(this->label8);
@@ -332,6 +333,7 @@ namespace OnlineBookStore {
 			this->Name = L"SignupForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"SignUp";
+			this->Load += gcnew System::EventHandler(this, &SignupForm::SignupForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -339,9 +341,9 @@ namespace OnlineBookStore {
 #pragma endregion
 
 	private: System::Void signup_Signin_Button_Click(System::Object^ sender, System::EventArgs^ e) {
-		MainForm^ mainform = gcnew MainForm;
-		mainform->ShowDialog();
-		this->Close();
+	
 	}
+private: System::Void SignupForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

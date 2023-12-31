@@ -70,7 +70,6 @@ namespace OnlineBookStore {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->userTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -237,15 +236,15 @@ namespace OnlineBookStore {
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Login";
+			this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void mainForm_Signup_Button_Click(System::Object^ sender, System::EventArgs^ e) {
-		SignupForm^ goingToSignUp = gcnew SignupForm;
-		goingToSignUp->ShowDialog();
-		this->Close();
 	}
+private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

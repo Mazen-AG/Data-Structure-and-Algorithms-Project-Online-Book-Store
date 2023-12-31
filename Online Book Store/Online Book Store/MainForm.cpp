@@ -1,8 +1,9 @@
 #include "MainForm.h"
+#include "SignupForm.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
-void main(array<String^>^ args)
+void main()
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);

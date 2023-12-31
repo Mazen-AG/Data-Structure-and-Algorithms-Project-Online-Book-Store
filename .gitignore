@@ -399,3 +399,7 @@ FodyWeavers.xsd
 *.obj
 Online Book Store/Online Book Store/x64/Debug/Online B.FD2AFE6A.tlog/Online Book Store.lastbuildstate
 Online Book Store/Online Book Store/x64/Debug/Online Book Store.log
+*.obj
+Online Book Store/.vs/Online Book Store/v17/.suo
+Online Book Store/Online Book Store/x64/Debug/vc143.pdb
+*.cache
