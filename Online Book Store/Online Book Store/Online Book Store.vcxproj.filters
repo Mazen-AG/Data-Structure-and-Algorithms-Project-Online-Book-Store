@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MainForm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Book.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -45,14 +42,17 @@
     <ClCompile Include="WishList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SignupForm.cpp">
+    <ClCompile Include="AccountRegister.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LandingPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MainForm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BinaryTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -86,10 +86,13 @@
     <ClInclude Include="WishList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SignupForm.h">
+    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="AccountRegister.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LandingPage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

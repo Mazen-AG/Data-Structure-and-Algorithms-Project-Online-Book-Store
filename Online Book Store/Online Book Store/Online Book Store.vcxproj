@@ -120,25 +120,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AccountRegister.cpp" />
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="BookSystem.cpp" />
     <ClCompile Include="Catalog.cpp" />
-    <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="LandingPage.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="OrderTracking.cpp" />
     <ClCompile Include="Payment.cpp" />
     <ClCompile Include="SearchAndFilter.cpp" />
     <ClCompile Include="ShoppingList.cpp" />
-    <ClCompile Include="SignupForm.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="WishList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccountRegister.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="Book.h" />
     <ClInclude Include="BookSystem.h" />
     <ClInclude Include="Catalog.h" />
     <ClInclude Include="DynamicArray.h" />
-    <ClInclude Include="MainForm.h">
+    <ClInclude Include="LandingPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="OrderTracking.h" />
@@ -146,18 +150,15 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="SearchAndFilter.h" />
     <ClInclude Include="ShoppingList.h" />
-    <ClInclude Include="SignupForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="User.h" />
     <ClInclude Include="WishList.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.h</DependentUpon>
+    <EmbeddedResource Include="AccountRegister.resx">
+      <DependentUpon>AccountRegister.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignupForm.resx">
-      <DependentUpon>SignupForm.h</DependentUpon>
+    <EmbeddedResource Include="LandingPage.resx">
+      <DependentUpon>LandingPage.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,16 +1,6 @@
-﻿  Book.cpp
-  BookSystem.cpp
-  Catalog.cpp
-  MainForm.cpp
-  OrderTracking.cpp
-  Payment.cpp
-C:\Users\Maz\Documents\GitHub\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\Online Book Store\Payment.cpp(55,33): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  SearchAndFilter.cpp
-  ShoppingList.cpp
-  SignupForm.cpp
-  User.cpp
-  WishList.cpp
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+﻿  AccountRegister.cpp
+  LandingPage.cpp
+  Main.cpp
   Generating Code...
-  Book.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  AccountRegister.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Online Book Store.vcxproj -> C:\Users\Maz\Documents\GitHub\Data-Structure-and-Algorithms-Project-Online-Book-Store\Online Book Store\x64\Debug\Online Book Store.exe
