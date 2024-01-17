@@ -1,4 +1,4 @@
-# **!! IMPORTANT !! This is a CLR/C++ designed program for windows using C++ made on Microsoft Visual Studio, The Front-End is made with C++/CLI**
+# **!! IMPORTANT !! This is a CLR/C++ designed program for windows using C++ made on Microsoft Visual Studio, The Front-End is made with C++/CL**
 
 # About
 
@@ -7,7 +7,7 @@ This app was designed as part of a college project, it's purpose was to be an On
 
 | Name                                                               | Worked On                                 |
 | ------------------------------------------------------------------ | ----------------------------------------- |
-| [Mazen Ahmed Galal Selim](https://github.com/Mazen421) Team Leader | Front-End And Back-End |
+| [**Mazen Ahmed Galal Selim**](https://github.com/Mazen421) Team Leader | Front-End And Back-End |
 | [Saif Eldin Mohamed Hatem](https://github.com/Trimbex)             | Back-End and a part in Front-End           |
 | [Basel Ashraf Fikry](https://github.com/BaselAshraf81)             | Back-End           |
 | [Ahmed Khafagyy](https://github.com/AhmedKhafagyy)                 | Back-End           |
