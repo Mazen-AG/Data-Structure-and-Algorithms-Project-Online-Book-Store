@@ -43,9 +43,3 @@ The front-end was developed by Mazen and Saif, it was done in Visual studio usin
 | Payment Form         |       | ✅   | 
 | User Dashboard       | ✅    |      |
 | Browse               | ✅    |      |
-
-# Progression
-
-- The back end is 70% finished
-- The front end is not fully finished, it is 20% done
-
